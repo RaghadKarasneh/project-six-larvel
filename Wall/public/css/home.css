@@ -169,6 +169,11 @@ a,p,h1,h2,h3,h4,ul {
   margin-top: 50px;
   font-size: 20px;
 }
+.services a{
+  text-decoration: none;
+  color: #46494d;
+  font-size: 18px;
+}
 .services-points{
   margin-top: 50px;
   margin-right: 20px;

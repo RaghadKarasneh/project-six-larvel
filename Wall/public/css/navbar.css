@@ -21,7 +21,7 @@ div.container{
     text-align: right;
 }
 ul a{
-    color: #FFF;
+    color: #cb2c3e !important;
     text-decoration: none;
     font: 20px Raleway;
     margin: 0px 10px;
@@ -43,7 +43,7 @@ li{
     width: 0%;
     height: 2px;
     content: '';
-    background: #FFF;
+    background: #cb2c3e;
     transition: all 0.3s;
 }
 
@@ -63,7 +63,7 @@ li{
 }
 .nav-link,
 .active{
-    color: rgb(255 255 255) !important;
+    color: #cb2c3e !important;
 }
 .navbar-direction{
     margin-left: 45%;

@@ -16,6 +16,13 @@ use App\Http\Controllers\WallProject;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('login', [WallProject::class, 'index'])->name('login');
+
+Route::get('registration', [WallProject::class, 'registration'])->name('register');
+
+Route::post('home', [WallProject::class, 'home']); 
+Route::get('logout', [WallProject::class, 'logout'])->name('logout');
 Route::get('/navbar',[WallProject::class,'showNavbar']);
-Route::get('/home',[WallProject::class,'showHomePage']);
+Route::post('/home',[WallProject::class,'showHomePage']);
 Route::get('/footer',[WallProject::class,'showFooter']);
+Route::get('/single-service',[WallProject::class,'singleService']);

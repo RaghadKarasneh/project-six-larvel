@@ -94,46 +94,46 @@
                                 <div class="col-lg-6">
                                     {{-- sevice 1 --}}
                                     <i class="fa-solid fa-angles-right"></i>   
-                                    <span> MURAL PAINTAING</span>
+                                    <a href=""> MURAL PAINTAING</a>
                                     
                                     
                                     <br>
                                     <br>
                                         {{-- sevice 2 --}}
                                     <i class="fa-solid fa-angles-right"></i>   
-                                    <span> EXTERIOR PAINTAING</span>
+                                    <a href=""> EXTERIOR PAINTAING</a>
                                     <br>
                                     <br>
                                         {{-- sevice 3 --}}
                                     <i class="fa-solid fa-angles-right"> </i> 
-                                    <span>  INTERIOR PAINTAING</span>
+                                    <a href="">  INTERIOR PAINTAING</a>
                                     <br>
                                     <br>
                                         {{-- sevice 4 --}}
                                     <i class="fa-solid fa-angles-right"></i>   
-                                    <span> DRYWALL REPAIR</span>
+                                    <a href=""> DRYWALL REPAIR</a>
                                 </div>
                                 {{-- Second coulmn --}}
                                 <div class="col-lg-6">
                                     {{-- sevice 5 --}}
                                     <i class="fa-solid fa-angles-right"></i>
-                                    <span> GARAGE PAINTAING</span>
+                                    <a href=""> GARAGE PAINTAING</a>
                                     
                                     <br>
                                     <br>
                                         {{-- sevice 6 --}}
                                     <i class="fa-solid fa-angles-right"></i>   
-                                    <span> DOOR PAINTAING</span>
+                                    <a href=""> DOOR PAINTAING</a>
                                     <br>
                                     <br>
                                         {{-- sevice 7 --}}
                                     <i class="fa-solid fa-angles-right"> </i> 
-                                    <span>  BASEMENT PAINTAING</span>
+                                    <a href="">  BASEMENT PAINTAING</a>
                                     <br>
                                     <br>
                                         {{-- sevice 8 --}}
                                         <i class="fa-solid fa-angles-right"></i>
-                                        <span> WALLPAPER REMOVAL</span>
+                                        <a href=""> WALLPAPER REMOVAL</a>
                                 </div>
                             </div>
                         </div>
