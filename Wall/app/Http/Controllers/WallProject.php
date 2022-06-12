@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Session;
 use App\Models\User;
+use App\Models\Services;
 use Hash;
 class WallProject extends Controller
 { 
@@ -129,14 +130,18 @@ class WallProject extends Controller
     public function showNavbar(){
         return view('navbar');
     }
-    public function showHomePage(){
-        return view('home');
+    public function showHomePage($id){
+        $service= Services::find($id);
+        return view('home',compact('service'));
+
     }
     public function showFooter(){
         return view('footer');
     }
-    public function singleService(){
-        return view('singleService');
+    public function singleService($id){
+        $service= Services::find($id);
+        return view('singleService',compact('service'));
+
     }
     public function showAboutUs(){
         return view('about');
@@ -181,11 +186,11 @@ class WallProject extends Controller
         $add->save();
         
         return redirect('update_info')->with('message','Thanks for all you do! ...
-                                                     you make our dream work.
-                                                     All of your volunteer work is greatly appreciated.
-                                                     We are so grateful for your hard work!
-                                                     Thank you for your time and patience. ...
-                                                     Your help will be so important to our project!
-                                                     ');
+         you make our dream work.
+        All of your volunteer work is greatly appreciated.
+        We are so grateful for your hard work!
+        Thank you for your time and patience. ...
+        Your help will be so important to our project!
+        ');
       }
 }

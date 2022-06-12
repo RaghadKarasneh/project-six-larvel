@@ -87,14 +87,17 @@
                     </div>
 
                     <div class="col-lg-6">
-                        <img src="/images/service2.png" height="auto" width="100%">
+                        <img src="/images/'service2.png'" height="auto" width="100%">
                         <p class="text-start">We provide you all what you need to make your wall, house, or even your organization beutifaul as much as you want.</p>
                         <div class="text-start services-points">
                             <div class="row">
-                                <div class="col-lg-6">
+                                {{-- <div class="col-lg-6"> --}}
                                     {{-- sevice 1 --}}
+                                    @foreach ($service as $value)
+                                        
+                                    
                                     <i class="fa-solid fa-angles-right"></i>   
-                                    <a href=""> MURAL PAINTAING</a>
+                                    <a href="{{url('/single-service/id/'.$value->id)}}"> MURAL PAINTAING</a>
                                     
                                     
                                     <br>
@@ -112,29 +115,30 @@
                                         {{-- sevice 4 --}}
                                     <i class="fa-solid fa-angles-right"></i>   
                                     <a href=""> DRYWALL REPAIR</a>
-                                </div>
+                                {{-- </div> --}}
                                 {{-- Second coulmn --}}
-                                <div class="col-lg-6">
+                                {{-- <div class="col-lg-6">
                                     {{-- sevice 5 --}}
-                                    <i class="fa-solid fa-angles-right"></i>
+                                    {{-- <i class="fa-solid fa-angles-right"></i>
                                     <a href=""> GARAGE PAINTAING</a>
                                     
                                     <br>
                                     <br>
                                         {{-- sevice 6 --}}
-                                    <i class="fa-solid fa-angles-right"></i>   
+                                    {{-- <i class="fa-solid fa-angles-right"></i>   
                                     <a href=""> DOOR PAINTAING</a>
                                     <br>
-                                    <br>
+                                    <br> --}}
                                         {{-- sevice 7 --}}
-                                    <i class="fa-solid fa-angles-right"> </i> 
+                                    {{-- <i class="fa-solid fa-angles-right"> </i> 
                                     <a href="">  BASEMENT PAINTAING</a>
                                     <br>
-                                    <br>
+                                    <br> --}}
                                         {{-- sevice 8 --}}
-                                        <i class="fa-solid fa-angles-right"></i>
+                                        {{-- <i class="fa-solid fa-angles-right"></i>
                                         <a href=""> WALLPAPER REMOVAL</a>
-                                </div>
+                                </div> --}} 
+                                @endforeach
                             </div>
                         </div>
                     </div>

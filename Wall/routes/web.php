@@ -25,7 +25,7 @@ Route::get('logout', [WallProject::class, 'logout'])->name('logout');
 Route::get('/navbar',[WallProject::class,'showNavbar']);
 Route::get('/home',[WallProject::class,'showHomePage']);
 Route::get('/footer',[WallProject::class,'showFooter']);
-Route::get('/single-service',[WallProject::class,'singleService']);
+Route::get('/single-service/id/{id}',[WallProject::class,'singleService']);
 Route::get('/about-us',[WallProject::class,'showAboutUs']);
 
 
