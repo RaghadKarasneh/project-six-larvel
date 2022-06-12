@@ -49,17 +49,17 @@
                 <div class="row">
                     <!-- Start Single Service -->
                     <div class="col-md-6 col-lg-6">
-                        <div class="single-service text-center">
+                        <div class="single-feature text-center">
                             <i class="fa fa-house-chimney fa-4x"></i>
-                            <h3 class="title">We have painted over 500 organizations, homes, and walls</h3>	
+                            <h3>We have painted over 500 organizations, homes, and walls</h3>	
                         </div>
                     </div>
                     <!-- / End Single Service -->
                     <!-- Start Single Service -->
                     <div class="col-md-6 col-lg-6">
-                        <div class="single-service text-center">
+                        <div class="single-feature text-center">
                                 <i class="fa-solid fa-clock fa-4x"></i>
-                                <h3 class="title">We are ready to serve you 24 hours a week</h3>
+                                <h3>We are ready to serve you 24 hours a week</h3>
                         </div>
                     </div>
                     <!-- / End Single Service -->
@@ -67,17 +67,17 @@
                 <div class="row">
                     <!-- Start Single Service -->
                     <div class="col-md-6 col-lg-6">
-                        <div class="single-service text-center">
+                        <div class="single-feature text-center">
                             <i class="fa-solid fa-file-pen fa-4x"></i>
-                                <h3 class="title">Color consultant to help in color selection</h3>
+                                <h3>Color consultant to help in color selection</h3>
                         </div>
                     </div>
                     <!-- / End Single Service -->
                     <!-- Start Single Service -->
                     <div class="col-md-6 col-lg-6">
-                        <div class="single-service text-center">
+                        <div class="single-feature text-center">
                                 <i class="fa-solid fa-magnifying-glass fa-4x"></i>
-                                <h3 class="title">Home diagnostic process for determining whether or not painting is needed</h3>
+                                <h3>Home diagnostic process for determining whether or not painting is needed</h3>
                         </div>
                     </div>
                     <!-- / End Single Service -->
@@ -87,12 +87,81 @@
             <div class="clearfix"></div>
 
             {{-- Start services section --}}
-            <div class="row services">
-                <div class="col-lg-6">
+            <div class="services">
+                <h2 class="title text-center">OUR <span>SERVICES</span></h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="/images/service3.png" height="auto" width="100%">
+                    </div>
+
+                    <div class="col-lg-6">
+                        <img src="/images/service2.png" height="auto" width="100%">
+                        <p class="text-start">We provide you all what you need to make your wall, house, or even your organization beutifaul as much as you want.</p>
+                        <div class="text-start services-points">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    {{-- sevice 1 --}}
+                                    <i class="fa-solid fa-angles-right"></i>   
+                                    <span> MURAL PAINTAING</span>
+                                    
+                                    
+                                    <br>
+                                    <br>
+                                        {{-- sevice 2 --}}
+                                    <i class="fa-solid fa-angles-right"></i>   
+                                    <span> EXTERIOR PAINTAING</span>
+                                    <br>
+                                    <br>
+                                        {{-- sevice 3 --}}
+                                    <i class="fa-solid fa-angles-right"> </i> 
+                                    <span>  INTERIOR PAINTAING</span>
+                                    <br>
+                                    <br>
+                                        {{-- sevice 4 --}}
+                                    <i class="fa-solid fa-angles-right"></i>   
+                                    <span> DRYWALL REPAIR</span>
+                                </div>
+                                {{-- Second coulmn --}}
+                                <div class="col-lg-6">
+                                    {{-- sevice 1 --}}
+                                    <i class="fa-solid fa-angles-right"></i>
+                                    <span> GARAGE PAINTAING</span>
+                                    
+                                    <br>
+                                    <br>
+                                        {{-- sevice 2 --}}
+                                    <i class="fa-solid fa-angles-right"></i>   
+                                    <span> DOOR PAINTAING</span>
+                                    <br>
+                                    <br>
+                                        {{-- sevice 3 --}}
+                                    <i class="fa-solid fa-angles-right"> </i> 
+                                    <span>  BASEMENT PAINTAING</span>
+                                    <br>
+                                    <br>
+                                        {{-- sevice 4 --}}
+                                        <i class="fa-solid fa-angles-right"></i>
+                                        <span> WALLPAPER REMOVAL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
-            </div>
-            {{-- End services section --}}
+           
         </div>
+        {{-- End services section --}}
+        <div class="clearfix"></div>
+        {{-- Start section Join Us --}}
+        <div class="join-us">
+            <div class="row">
+                <div class="col-lg-6 text-center">
+                    <h1>JOIN US</h1>
+                    <p class="text-center"> If you are intrested in what we do and you want to be a member of our family then join us NOW.</p>
+                    <button>JOIN US</button>
+                </div>
+            </div>
+        </div>
+        {{-- Start section Our Projects --}}
     </main>
 @endsection
