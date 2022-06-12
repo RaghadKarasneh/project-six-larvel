@@ -13,4 +13,7 @@ class WallProject extends Controller
     public function showHomePage(){
         return view('home');
     }
+    public function showFooter(){
+        return view('footer');
+    }
 }

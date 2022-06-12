@@ -159,6 +159,12 @@ a,p,h1,h2,h3,h4,ul {
 .col-lg-6{
     margin-bottom: 40px;
 }
+.services {
+  margin-top: 100px;
+}
+.services h2{
+  margin-bottom: 80px;
+}
 .services p{
   margin-top: 50px;
   font-size: 20px;
@@ -175,7 +181,7 @@ a,p,h1,h2,h3,h4,ul {
 
 .join-us{
   background-image: url('/images/join-us.png');
-  height: 500px;
+  height: 400px;
   background-repeat: no-repeat;
   background-size: contain;
   margin-top: 100px;
@@ -206,4 +212,7 @@ a,p,h1,h2,h3,h4,ul {
   background-color: white;
   color: #ec2222;
   border-color:#ec2222;
+}
+.our-projects{
+  margin-bottom: 100px;
 }

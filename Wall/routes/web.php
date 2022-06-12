@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 Route::get('/navbar',[WallProject::class,'showNavbar']);
 Route::get('/home',[WallProject::class,'showHomePage']);
+Route::get('/footer',[WallProject::class,'showFooter']);

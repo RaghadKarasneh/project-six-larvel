@@ -13,6 +13,7 @@
       crossorigin="anonymous"></script>
       <script src="https://kit.fontawesome.com/7b836f378e.js" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="/css/navbar.css">
+      <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/@yield('css','')">
 </head>
 <body>
