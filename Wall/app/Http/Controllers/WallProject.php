@@ -138,4 +138,54 @@ class WallProject extends Controller
     public function singleService(){
         return view('singleService');
     }
+    public function showAboutUs(){
+        return view('about');
+    }
+    public function showing(){
+        $info=user::all();
+        return view('user_info',compact('info'));
+    }
+    
+
+      public function updateInfo($id){
+        $update=user::find($id);
+        return view('update_info',['update'=>$update]);
+      }
+      
+      public function update_i(Request $request, $id){
+        $update=user::find($id);
+        $update->first_name=$request->input('firstname');
+        $update->	last_name=$request->input('lastname');
+        $update->email =$request->input('email'); 
+        $update->phone_number=$request->input('phonenumber');
+        $update->address=$request->input('address');
+        $update->password=$request->input('password');
+        $update->update();
+        return redirect('/info')->with('message','the data has been updated successfully');
+      } 
+
+
+      public function addvol(){
+        return view('v_reg');}
+
+
+      public function saveInfo(Request $request){
+        $add=new volunteers();
+        $add->first_name=$request->input('firstname');
+        $add->last_name=$request->input('lastname');
+        $add->email =$request->input('email'); 
+        $add->phone_number=$request->input('phonenumber');
+        $add->address=$request->input('address');
+        $add->password=$request->input('password');
+        $add->description=$request->input('description');
+        $add->save();
+        
+        return redirect('update_info')->with('message','Thanks for all you do! ...
+                                                     you make our dream work.
+                                                     All of your volunteer work is greatly appreciated.
+                                                     We are so grateful for your hard work!
+                                                     Thank you for your time and patience. ...
+                                                     Your help will be so important to our project!
+                                                     ');
+      }
 }

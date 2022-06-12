@@ -23,6 +23,18 @@ Route::get('registration', [WallProject::class, 'registration'])->name('register
 Route::post('home', [WallProject::class, 'home']); 
 Route::get('logout', [WallProject::class, 'logout'])->name('logout');
 Route::get('/navbar',[WallProject::class,'showNavbar']);
-Route::post('/home',[WallProject::class,'showHomePage']);
+Route::get('/home',[WallProject::class,'showHomePage']);
 Route::get('/footer',[WallProject::class,'showFooter']);
 Route::get('/single-service',[WallProject::class,'singleService']);
+Route::get('/about-us',[WallProject::class,'showAboutUs']);
+
+
+
+
+
+Route::get('/info',[WallProject::class, 'showing']);
+Route::get('/update/id/{id}',[WallProject::class,'updateInfo']);
+Route::put('/updatee/id/{id}',[WallProject::class,'update_i']);
+
+Route::put('/add',[WallProject::class,'addvol']);
+Route::post('/add',[WallProject::class,'saveInfo']);
