@@ -9,7 +9,11 @@
               <div class="card">
                   <div class="card-header">Login</div>
                   <div class="card-body">
-  
+                    @if (session('message'))
+                    <div class="alert alert-success" role="alert">
+                        {{session('message')}}
+                    </div>
+                @endif
                       <form action="{{route('login.post')}}" method="post">
                           @csrf
                           

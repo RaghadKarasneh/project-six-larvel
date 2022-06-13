@@ -1,7 +1,7 @@
 <?php
   
 namespace App\Http\Controllers;
-  
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -34,18 +34,61 @@ class AuthController extends Controller
             //'password_confirmation' => 'required',
         ]);
    
-        $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
-            return redirect()->intended('home')->withSuccess('You have Successfully loggedin');
+        $input = $request->only('email', 'password');
+        // foreach($input as $value ){
+        //     if($data->name == $request->input('name')){
+    
+        //     }else{
+                
+        //     }
+        // }
+        $users = DB::select('select * from users where is_deleted=0');
+        foreach ($users as $user) {
+            if($user->email == $input['email']){
+                $id=$user->id;
+                if(($user->password == $input['password']) && ($user->is_admin == 0)){
+                    $user->is_login=1;
+                    DB::update('Update users SET is_login=? where id=?',[
+                        1,
+                        $id
+                    ]);
+                    return redirect('/home')->with('id',$user->id);
+                }else{
+                    if($users[count($users)-1]->id == $user->id){
+                    return redirect('/login')->with('message','Email or password is wrong');
+                    }else{
+                        continue;
+                    }
+                }
+            }else{
+                if($users[count($users)-1]->id == $user->id){
+                    return redirect('/AdminLogin')->with('message','Email or password is wrong');
+                }else{
+                    continue;
+                }
+            }
         }
-        return redirect("/home")->withSuccess('Oppes! You have entered invalid credentials');
+        // if (Auth::attempt(['email'=>$input['email'],'password'=>$input['password']  ])) {
+        //     // 'is_login'=>1
+        //     return redirect('home');
+        // }else{
+        //     return redirect("login")->with('message','Oppes! You have entered invalid credentials');
+        // }
+        // if(Auth::check()){
+        //     return redirect()->route('home');
+        // }
+        // else{
+        //         return redirect("login")->with('message','Oppes! You have entered invalid credentials');
+        //     }
+  
+        
     }
 
     public function postRegistration(Request $request)
     {  
         $request->validate([
-            'first_name' => 'required',
-            'last_name' => 'required',
+            'first_name' => 'required|alpha',
+            'last_name' => 'required|alpha',
             // 'name' => 'required',
             'email' => 'required|email|unique:users',
             'phone_number' => 'required|min:10',

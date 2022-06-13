@@ -140,9 +140,20 @@ class AdminController extends Controller
     }
 
     //Contact US
-    public function contactUs(){
-        return view('ContactUs');
+    public function reservations(){
+        $services= Services::all();
+        return view('reservations', compact('services'));
     }
+    public function bringReservations($id){
+        $user = User::find($id);
+        $service=request('service');
+        $pay=request('pay');
+        $service_image=request('service_image');
+
+
+        return redirect('/reservation')->with('message', 'Your message is sent, we will respond soon');
+    }
+
 
     // Bar Chart
     // public function barChart(){

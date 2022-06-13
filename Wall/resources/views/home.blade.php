@@ -6,6 +6,7 @@
  {{-- To add home body --}}
 @section('content')
 {{-- main section --}}
+
     <main>
         <div class="container-fluied">
             {{-- Start hero section --}}
@@ -19,8 +20,8 @@
                   <div id="polina">
                     <h1 class="text-center">Because painting is by nature a <span class="red-concept">luminous</span> language</h1>
                   
-                    <a href="" class="btn">SIGN UP</a>
-                    <a href="" class="btn">SIGN IN</a>
+                    <a href="" class="btn" style="display:".$display>SIGN UP</a>
+                    <a href="" class="btn" style="display:".$display>SIGN IN</a>
                   </div>
             </div>
             {{-- End hero section --}}
