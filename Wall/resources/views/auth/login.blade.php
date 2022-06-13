@@ -1,5 +1,6 @@
 @extends('master')
-  
+@section('title', 'Login')
+@section('css', 'login.css')
 @section('content')
 <main class="login-form">
   <div class="cotainer">
@@ -9,8 +10,9 @@
                   <div class="card-header">Login</div>
                   <div class="card-body">
   
-                      <form action="{{url('/home')}}" method="POST">
+                      <form action="{{route('login.post')}}" method="post">
                           @csrf
+                          
                           <div class="form-group row">
                               <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
                               <div class="col-md-6">
@@ -28,16 +30,6 @@
                                   @if ($errors->has('password'))
                                       <span class="text-danger">{{ $errors->first('password') }}</span>
                                   @endif
-                              </div>
-                          </div>
-  
-                          <div class="form-group row">
-                              <div class="col-md-6 offset-md-4">
-                                  <div class="checkbox">
-                                      <label>
-                                          <input type="checkbox" name="remember"> Remember Me
-                                      </label>
-                                  </div>
                               </div>
                           </div>
   

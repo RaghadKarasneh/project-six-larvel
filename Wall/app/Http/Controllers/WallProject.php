@@ -8,124 +8,122 @@ use Session;
 use App\Models\User;
 use App\Models\Services;
 use Hash;
+use Illuminate\Support\Facades\DB;
 class WallProject extends Controller
 { 
+   /**
+     * Write code on Method
+     *
+     * @return response()
+     */
+    public function index()
+    {
+        return view('auth.login');
+    }  
+      
     /**
-    * Write code on Method
-    *
-    * @return response()
-   */
-   public function index()
-   {
-       return view('auth.login');
-   }  
-     
-   /**
-    * Write code on Method
-    *
-    * @return response()
-    */
-   public function registration()
-   {
-       return view('auth.registration');
-   }
-     
-   /**
-    * Write code on Method
-    *
-    * @return response()
-    */
-   public function postLogin(Request $request)
-   {
-       $request->validate([
-           // 'first_name' => 'required',
-           // 'last_name' => 'required',
-           'email' => 'required',
-           // 'phone_number' => 'required',
-           //'city' => 'required',
-           //'address' => 'required,
-           'password' => 'required',
-           //'password_confirmation' => 'required',
-       ]);
+     * Write code on Method
+     *
+     * @return response()
+     */
+    public function registration()
+    {
+        return view('auth.registration');
+    }
+      
+    /**
+     * Write code on Method
+     *
+     * @return response()
+     */
+    public function postLogin(Request $request)
+    {
+        $request->validate([
+            // 'first_name' => 'required',
+            // 'last_name' => 'required',
+            'email' => 'required',
+            // 'phone_number' => 'required',
+            //'city' => 'required',
+            //'address' => 'required,
+            'password' => 'required',
+            //'password_confirmation' => 'required',
+        ]);
+   
+        $credentials = $request->only('email', 'password');
+        if (Auth::attempt($credentials)) {
+            return redirect()->intended('home')
+                        ->withSuccess('You have Successfully logged in');
+        }
   
-       $credentials = $request->only('email', 'password');
-       if (Auth::attempt($credentials)) {
-           return redirect()->intended('home')->withSuccess('You have Successfully loggedin');
-       }
- 
-       return redirect("login")->withSuccess('Oppes! You have entered invalid credentials');
-   }
-     
-   /**
-    * Write code on Method
-    *
-    * @return response()
-    */
-   public function postRegistration(Request $request)
-   {  
-       $request->validate([
-           'first_name' => 'required',
-           'last_name' => 'required',
-           // 'name' => 'required',
-           'email' => 'required|email|unique:users',
-           'phone_number' => 'required|min:10',
-           'city' => 'required',
-           'address' => 'required',
-           'password' => 'required|min:8|regex:/^[a-zA-Z0-9!$#%]+$/',
-           'password_confirmation' =>'required|min:8|regex:/^[a-zA-Z0-9!$#%]+$/',
-       ]);
-          
-       $data = $request->all();
-       $check = $this->create($data);
-        
-       return redirect("home")->withSuccess('Great! You have Successfully loggedin');
-   }
-   
-   /**
-    * Write code on Method
-    *
-    * @return response()
-    */
-   public function home()
-   {
-       if(Auth::check()){
-           return view('home');
-       }
- 
-       return redirect("login")->withSuccess('Opps! You do not have access');
-   }
-   
-   /**
-    * Write code on Method
-    *
-    * @return response()
-    */
-   public function create(array $data)
-   {
-     return User::create([
-       'first_name' => $data['first_name'],
-       'last_name' => $data['last_name'],
-       // 'name' => $data['name'],
-       'email' => $data['email'],
-       'phone_number' =>$data['phone_number'],
-       'city' =>$data['city'],
-       'address' =>$data['address'],
-       'password' => Hash::make($data['password']),
-       'password_confirmation' => Hash::make($data['password_confirmation'])
-     ]);
-   }
-   
-   /**
-    * Write code on Method
-    *
-    * @return response()
-    */
-   public function logout() {
-       Session::flush();
-       Auth::logout();
- 
-       return Redirect('login');
-   }
+        return redirect("login")->withSuccess('Oppes! You have entered invalid credentials');
+    }
+      
+    /**
+     * Write code on Method
+     *
+     * @return response()
+     */
+    public function postRegistration(Request $request)
+    {   
+        $request->validate([
+        'first_name'=>'required|alpha',
+        'last_name'=>'required|alpha',
+        'email'=>'required|email',
+        'password'=>'required_with:password_confirmation|same:password_confirmation|min:8|',
+        'confirm_password'=>'min:8',
+        'city'=>'required|alpha',
+        'address'=>'required',
+        'phone_number'=>'numeric|digits_between:9,11'
+    ]);
+    
+    $data = $request->all();
+        $check = $this->create($data);
+         
+        return redirect("login")->withSuccess('Great! You have Successfully logged in');
+}
+    
+    /**
+     * Write code on Method
+     *
+     * @return response()
+     */
+    public function home()
+    {
+      
+            return view('home');
+      
+  
+    }
+    
+    /**
+     * Write code on Method
+     *
+     * @return response()
+     */
+    public function create(array $data)
+    {
+      return User::create([
+        'first_name' => $data['first_name'],
+        'last_name' => $data['last_name'],
+        'email' => $data['email'],
+        'phone_number' =>$data['phone_number'],
+        'city' =>$data['city'],
+        'address' =>$data['address'],
+        'password' => $data['password']
+      ]);
+    }
+    
+    /**
+     * Write code on Method
+     *
+     * @return response()
+     */
+    // public function logout() {
+    //     Session::flush();
+    //     Auth::logout();
+  
+    //     return Redirect('login');
+    // }
     //View Navbar
     public function showNavbar(){
         return view('navbar');
@@ -158,14 +156,23 @@ class WallProject extends Controller
       }
       
       public function update_i(Request $request, $id){
-        $update=user::find($id);
-        $update->first_name=$request->input('firstname');
-        $update->	last_name=$request->input('lastname');
-        $update->email =$request->input('email'); 
-        $update->phone_number=$request->input('phonenumber');
-        $update->address=$request->input('address');
-        $update->password=$request->input('password');
-        $update->update();
+        $update= User::find($id);
+        $first_name=$request->input('firstname');
+        $last_name=$request->input('lastname');
+        $email =$request->input('email'); 
+        $phone_number=$request->input('phonenumber');
+        $address=$request->input('address');
+        $password=$request->input('password');
+        // $update->update();
+        DB::update('Update users SET first_name=?, last_name=?, email=?, phone_number=?, address=?, password=? where id=?',[
+            $first_name,
+            $last_name,
+            $email,
+            $phone_number,
+            $address,
+            $password,
+            $id
+        ]);
         return redirect('info/'.$id)->with('message','the data has been updated successfully');
       } 
 

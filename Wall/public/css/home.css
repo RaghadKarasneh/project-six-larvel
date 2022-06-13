@@ -6,6 +6,7 @@ video {
     top: 50%;
     left: 50%;
     min-width: 100%;
+    width: 120% !important;
     min-height: 100%;
     width: auto;
     height: auto;
@@ -220,4 +221,10 @@ a,p,h1,h2,h3,h4,ul {
 }
 .our-projects{
   margin-bottom: 100px;
+}
+.navbar a{
+  color:#fff !important
+}
+.borderXwidth a:before, div.borderXwidth a:after{
+  background-color: #fff !important;
 }

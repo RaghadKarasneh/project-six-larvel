@@ -4,6 +4,7 @@ main img{
     position: absolute;
     left: 25%;
     top:65%;
+    z-index: -5555;
 }
 h1{
     border-bottom: 1px solid #c6c2c2;
@@ -25,4 +26,12 @@ label{
 .btn{
     background-color: #d8374a;
     color: white;
+}
+form input{
+    display: block;
+    width: 50%;
+    border-radius: 20px;
+    padding: 5px 10px;
+    border-color: #d7d4d4;
+    background-color: transparent;
 }

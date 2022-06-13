@@ -25,6 +25,7 @@ class CreateUsersTable extends Migration
             $table->boolean('is_login');
             $table->boolean('is_organization');
             $table->boolean('is_admin');
+            $table->boolean('is_deleted');
             $table->rememberToken();
             $table->timestamps();
         });
