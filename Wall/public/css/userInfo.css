@@ -1,0 +1,15 @@
+main{
+    height: 80vh;
+}
+main img{
+    height: 500px;
+    opacity: 0.15;
+    position: absolute;
+    left: 25%;
+}
+.table{
+    margin: 100px auto;
+}
+.fa-pen-to-square{
+    color: #d73e49;
+}

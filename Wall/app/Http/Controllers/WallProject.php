@@ -130,8 +130,8 @@ class WallProject extends Controller
     public function showNavbar(){
         return view('navbar');
     }
-    public function showHomePage($id){
-        $service= Services::find($id);
+    public function showHomePage(){
+        $service= Services::all();
         return view('home',compact('service'));
 
     }
@@ -146,8 +146,8 @@ class WallProject extends Controller
     public function showAboutUs(){
         return view('about');
     }
-    public function showing(){
-        $info=user::all();
+    public function showing($id){
+        $info=User::find($id);
         return view('user_info',compact('info'));
     }
     
@@ -166,7 +166,7 @@ class WallProject extends Controller
         $update->address=$request->input('address');
         $update->password=$request->input('password');
         $update->update();
-        return redirect('/info')->with('message','the data has been updated successfully');
+        return redirect('info/'.$id)->with('message','the data has been updated successfully');
       } 
 
 
