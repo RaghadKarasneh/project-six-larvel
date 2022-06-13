@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WallProject;
-
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 
 /*
@@ -47,3 +47,22 @@ Route::get('registration', [AuthController::class, 'registration'])->name('regis
 Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post'); 
 Route::get('dashboard', [AuthController::class, 'dashboard']); 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+
+
+// Admin
+Route::get('/AdminDashboard',  [AdminController::class, 'viewDashboard']);
+Route::get('/AdminUsers',  [AdminController::class, 'viewUsers']);
+Route::get('/AdminServices', [AdminController::class, 'viewServices']);
+Route::get('/AdminReservations', [AdminController::class, 'viewReservations']);
+Route::get('/AdminAddSer', [AdminController::class, 'addServicePage']);
+Route::post('/AdminAddService', [AdminController::class, 'addService']);
+Route::get('/AdminEditSer/{id}', [AdminController::class, 'editServicePage']);
+Route::post('/AdminEditService/{id}', [AdminController::class, 'editService']);
+Route::get('/AdminDeleteSer/{id}', [AdminController::class, 'deleteService']);
+Route::get('/AdminEditUserPage/{id}', [AdminController::class, 'editUserPage']);
+Route::post('/AdminEditUser/{id}', [AdminController::class, 'editUser']);
+Route::get('/AdminDeleteUser/{id}', [AdminController::class, 'deleteUser']);
+Route::get('/chart', [AdminController::class, 'barChart']);
+Route::get('/AdminLogin', [AdminController::class, 'viewLogin']);
+Route::post('/AdminLoginCheck', [AdminController::class, 'Login']);
+Route::get('/contactUs', [AdminController::class, 'contactUs']);
