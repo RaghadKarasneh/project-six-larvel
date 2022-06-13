@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Services;
 use App\Models\User;
 
-
+use App\Models\Reservation;
 
 class AdminController extends Controller
 {
@@ -140,18 +140,29 @@ class AdminController extends Controller
     }
 
     //Contact US
-    public function reservations(){
+    public function reservations($id){
         $services= Services::all();
-        return view('reservations', compact('services'));
+        return view('reservations', compact('services','id'));
     }
     public function bringReservations($id){
-        $user = User::find($id);
+        $service_id=request('service');
         $service=request('service');
         $pay=request('pay');
         $service_image=request('service_image');
+        $user = User::find($id);
+        $service = Services::find($service_id);
+        $reservation = new Reservation();
+        $reservation->user_id=$id;
+        $reservation->service_id=$service_id;
+        $reservation->user_address=$user->address;
+        $reservation->cost=$service->service_cost;
+        // $userInfo = new User();
+        // 'user_id'->$user_id;
+        $reservation->pay=$pay;
+        $reservation->service_image=$service_image;
+        $reservation->save();
 
-
-        return redirect('/reservation')->with('message', 'Your message is sent, we will respond soon');
+        return redirect('reservation/id/{{$id}}')->with('message', 'Your message is sent, we will respond soon');
     }
 
 

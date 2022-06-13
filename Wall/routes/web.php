@@ -19,10 +19,11 @@ use App\Http\Controllers\AuthController;
 
 
 Route::view("show","register");
-Route::get('/', [WallProject::class, 'home']); 
+Route::get('/', [WallProject::class, 'home']);
+Route::get('/home/id/{id?}', [WallProject::class, 'showHomePage']); 
 Route::get('logout', [WallProject::class, 'logout'])->name('logout');
 Route::get('/navbar',[WallProject::class,'showNavbar']);
-Route::get('/home',[WallProject::class,'showHomePage']);
+Route::get('/home',[WallProject::class,'showHomePageGuest']);
 Route::get('/footer',[WallProject::class,'showFooter']);
 Route::get('/single-service/id/{id}',[WallProject::class,'singleService']);
 Route::get('/about-us',[WallProject::class,'showAboutUs']);
@@ -47,6 +48,8 @@ Route::get('registration', [AuthController::class, 'registration'])->name('regis
 Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post'); 
 Route::get('dashboard', [AuthController::class, 'dashboard']); 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/contact-us', [WallProject::class, 'contact']);
+Route::post('/contact-us-info', [WallProject::class, 'contactInfo']);
 
 
 // Admin
@@ -65,5 +68,5 @@ Route::get('/AdminDeleteUser/{id}', [AdminController::class, 'deleteUser']);
 Route::get('/chart', [AdminController::class, 'barChart']);
 Route::get('/AdminLogin', [AdminController::class, 'viewLogin']);
 Route::post('/AdminLoginCheck', [AdminController::class, 'Login']);
-Route::get('/reservation', [AdminController::class, 'reservations']);
-Route::post('/bringReservation', [AdminController::class, 'bringReservations']);
+Route::get('/reservation/id/{id}', [AdminController::class, 'reservations']);
+Route::post('/bringReservation/id/{id}', [AdminController::class, 'bringReservations']);

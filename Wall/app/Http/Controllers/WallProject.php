@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Session;
 use App\Models\User;
 use App\Models\Services;
+use App\Models\Contact;
 use Hash;
 use Illuminate\Support\Facades\DB;
 class WallProject extends Controller
@@ -16,11 +17,19 @@ class WallProject extends Controller
     public function showNavbar(){
         return view('navbar');
     }
-    public function showHomePage(){
+    public function showHomePage($id){
+        $id=null;
         $service= Services::all();
-        return view('home',compact('service'));
+        $display="none";
+        return view('home',compact('service','id','display'));
 
     }
+    public function showHomePageGuest(){
+      $service= Services::all();
+      $display="inline-block";
+      return view('home',compact('service','display'));
+
+  }
     public function showFooter(){
         return view('footer');
     }
@@ -86,4 +95,18 @@ class WallProject extends Controller
         Your help will be so important to our project!
         ');
       }
+      public function contact(){
+        return view('ContactUs');
+      }
+      public function contactInfo(Request $request){
+        $contact=new Contact();
+        $contact->first_name=$request->input('first_name');
+        $contact->last_name=$request->input('last_name');
+        $contact->email =$request->input('email'); 
+        $contact->subject=$request->input('subject');
+        $contact->message=$request->input('message');
+        $contact->save();
+        return redirect('/home');
+      }
+      
 }

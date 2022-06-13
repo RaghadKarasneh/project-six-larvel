@@ -52,7 +52,8 @@ class AuthController extends Controller
                         1,
                         $id
                     ]);
-                    return redirect('/home')->with('id',$user->id);
+                    $display="none";
+                    return redirect('/home/id/'.$id)->with('id',$user->id);
                 }else{
                     if($users[count($users)-1]->id == $user->id){
                     return redirect('/login')->with('message','Email or password is wrong');

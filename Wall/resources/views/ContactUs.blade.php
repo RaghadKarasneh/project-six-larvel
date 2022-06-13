@@ -6,57 +6,108 @@
 
 
 <div class="container" >
-    
-    <div class="row text-start w-100 fs-5 px-5">
+    <!--Section: Contact v.2-->
+<section class="mb-4">
 
-     <div class="col-lg-4">
-        <form action="/bringContacts" method="post" enctype="multipart/form-data">
-            @csrf
-            <input type="hidden" name="_token" value="{{csrf_token()}}" />
-            <label class="">First Name:</label><br>
-            <input  class="mb-3" type="text" name="first_name" required><br>
-            <label>Last Name:</label><br>
-            <input  class="mb-3" type="text"  name="last_name" required><br>
-            <label>Email:</label><br>
-            <input  class="mb-3" type="text"  name="email" required><br>
-            <label>Phone Number:</label><br>
-            <input  class="mb-3" type="text"  name="phone_number" required><br>
-            <label>City:</label><br>
-            <input  class="mb-3" type="text"  name="city" required><br>
-            <label>Address:</label><br>
-            <input class="mb-3" type="text"  name="address" required><br>
-            <label>Organization:</label><br>
-            <input  class="mb-3" type="radio"  name="org" value="1"><label style="margin-right: 5%;">Yes</label>
-            <input  class="mb-3" type="radio"  name="org" value="0"><label>No</label><br>
-            <label>choose services?</label><br>
-            <select style="width: 50%; height:30px;" class="mb-3" name="service" id="cars">
-                @foreach ($services as $ser)
-                    <option value="{{$ser->id}}">{{$ser->service_name}}</option>   
-                @endforeach    
-            </select>
-            <br>
-            {{-- <label>Date:</label><br> 
-            <input style="width: 50%; height:30px;" class="mb-3" type="date"  name="service_cost" required><br> --}}
-            {{-- <label>Time (24/7 system):</label><br>
-            <input style="width: 20%; height:30px;" class="mb-3" type="time"  name="service_cost" required><br> --}}
-            <label>Would you be able to pay the cost of the service?</label><br>
-            <input style="width: 5%; height:20px;" class="mb-3" type="radio"  name="pay" value="1"><label style="margin-right: 5%;">Yes</label>
-            <input style="width: 5%; height:20px;" class="mb-3" type="radio"  name="pay" value="0"><label>No</label><br>
-            <label>Upload an image of the location of required service:</label><br>
-            <input style="width: 20%; height:60px;" class="mb-3" type="file"  name="service_image" class="mb-5" required"><br><br>
-            <label>Insert the dimensions (in meter):</label><br>
-            <label>Width:</label>
-            <input style="width: 5%; height:30px;" class="mb-3" type="number"  name="width" class="mb-5" required>
-            <label>Height:</label>
-            <input style="width: 5%; height:30px;" class="mb-3" type="number"  name="height" class="mb-5" required><br>
-                                
-            <button style="position: relative; left:4%; width:12%;" class="btn btn-danger  d-none d-md-block pull-right  hidden-xs hidden-sm waves-effect waves-light text-white">Send</button>
-        </form>
-     </div>
-        
-        <div class="col-lg-6"><img src="https://th.bing.com/th/id/OIP.fG4DjCpvc5nl58fg47YsFQHaES?w=298&h=180&c=7&r=0&o=5&dpr=1.38&pid=1.7" alt="" srcset="" width="560px" height="500px"> </div>
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+        a matter of hours to help you.</p>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="/contact-us-info" method="POST">
+@csrf
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="first_name" class="form-control">
+                            <label for="name" class="">First name</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" id="name" name="last_name" class="form-control">
+                            <label for="name" class="">Last name</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="email" name="email" class="form-control">
+                            <label for="email" class="">Your email</label>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <input type="text" id="subject" name="subject" class="form-control">
+                            <label for="subject" class="">Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+
+            <div class="text-center text-md-left">
+                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+            </div>
+            <div class="status"></div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>San Francisco, CA 94126, USA</p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>+ 01 234 567 89</p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    <p>contact@mdbootstrap.com</p>
+                </li>
+            </ul>
+        </div>
+        <!--Grid column-->
+
     </div>
-</div>
+
+</section>
+<!--Section: Contact v.2-->
   </div>
 
 
