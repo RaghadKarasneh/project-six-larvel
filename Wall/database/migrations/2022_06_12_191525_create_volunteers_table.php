@@ -19,7 +19,7 @@ class CreateVolunteersTable extends Migration
             $table->string('last_name');
             $table->string('email')->unique();
             $table->string('phone_number');
-            $table->boolean('description');
+            $table->string('description');
             $table->timestamps();
         });
     }

@@ -19,6 +19,7 @@ class CreateServicesTable extends Migration
             $table->string('service_cost');
             $table->string('service_image');
             $table->longText('service_description');
+            $table->boolean('is_deleted')->default(0);
             $table->timestamps();
         });
     }

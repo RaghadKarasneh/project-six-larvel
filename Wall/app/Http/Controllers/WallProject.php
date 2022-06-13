@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\volunteers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -11,120 +12,7 @@ use Hash;
 use Illuminate\Support\Facades\DB;
 class WallProject extends Controller
 { 
-   /**
-     * Write code on Method
-     *
-     * @return response()
-     */
-    public function index()
-    {
-        return view('auth.login');
-    }  
-      
-    /**
-     * Write code on Method
-     *
-     * @return response()
-     */
-    public function registration()
-    {
-        return view('auth.registration');
-    }
-      
-    /**
-     * Write code on Method
-     *
-     * @return response()
-     */
-    public function postLogin(Request $request)
-    {
-        $request->validate([
-            // 'first_name' => 'required',
-            // 'last_name' => 'required',
-            'email' => 'required',
-            // 'phone_number' => 'required',
-            //'city' => 'required',
-            //'address' => 'required,
-            'password' => 'required',
-            //'password_confirmation' => 'required',
-        ]);
-   
-        $credentials = $request->only('email', 'password');
-        if (Auth::attempt($credentials)) {
-            return redirect()->intended('home')
-                        ->withSuccess('You have Successfully logged in');
-        }
-  
-        return redirect("login")->withSuccess('Oppes! You have entered invalid credentials');
-    }
-      
-    /**
-     * Write code on Method
-     *
-     * @return response()
-     */
-    public function postRegistration(Request $request)
-    {   
-        $request->validate([
-        'first_name'=>'required|alpha',
-        'last_name'=>'required|alpha',
-        'email'=>'required|email',
-        'password'=>'required_with:password_confirmation|same:password_confirmation|min:8|',
-        'confirm_password'=>'min:8',
-        'city'=>'required|alpha',
-        'address'=>'required',
-        'phone_number'=>'numeric|digits_between:9,11'
-    ]);
-    
-    $data = $request->all();
-        $check = $this->create($data);
-         
-        return redirect("login")->withSuccess('Great! You have Successfully logged in');
-}
-    
-    /**
-     * Write code on Method
-     *
-     * @return response()
-     */
-    public function home()
-    {
-      
-            return view('home');
-      
-  
-    }
-    
-    /**
-     * Write code on Method
-     *
-     * @return response()
-     */
-    public function create(array $data)
-    {
-      return User::create([
-        'first_name' => $data['first_name'],
-        'last_name' => $data['last_name'],
-        'email' => $data['email'],
-        'phone_number' =>$data['phone_number'],
-        'city' =>$data['city'],
-        'address' =>$data['address'],
-        'password' => $data['password']
-      ]);
-    }
-    
-    /**
-     * Write code on Method
-     *
-     * @return response()
-     */
-    // public function logout() {
-    //     Session::flush();
-    //     Auth::logout();
-  
-    //     return Redirect('login');
-    // }
-    //View Navbar
+ 
     public function showNavbar(){
         return view('navbar');
     }
@@ -187,12 +75,10 @@ class WallProject extends Controller
         $add->last_name=$request->input('lastname');
         $add->email =$request->input('email'); 
         $add->phone_number=$request->input('phonenumber');
-        $add->address=$request->input('address');
-        $add->password=$request->input('password');
         $add->description=$request->input('description');
         $add->save();
         
-        return redirect('update_info')->with('message','Thanks for all you do! ...
+        return redirect('home')->with('message','Thanks for all you do! ...
          you make our dream work.
         All of your volunteer work is greatly appreciated.
         We are so grateful for your hard work!

@@ -35,8 +35,8 @@ Route::get('/info/{id}',[WallProject::class, 'showing']);
 Route::get('/update-info/id/{id}',[WallProject::class,'updateInfo']);
 Route::put('/update/id/{id}',[WallProject::class,'update_i']);
 
-Route::put('/add',[WallProject::class,'addvol']);
-Route::post('/add',[WallProject::class,'saveInfo']);
+Route::get('/add',[WallProject::class,'addvol']);
+Route::put('/added',[WallProject::class,'saveInfo']);
 
 
 
