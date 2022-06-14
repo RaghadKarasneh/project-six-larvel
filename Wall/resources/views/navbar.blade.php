@@ -27,7 +27,7 @@
         <div class="collapse navbar-collapse borderXwidth" id="navbarSupportedContent">
         <ul class="navbar-nav navbar-direction">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{url('/home')}}">Home</a>
+                <a class="nav-link active" aria-current="page" href="{{url('/')}}">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{url('/about-us')}}">About Us</a>

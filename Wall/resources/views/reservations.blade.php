@@ -3,7 +3,12 @@
 @section('title','Reservation')
 @section('css','reserv.css')
 @section('content')
-
+<nav aria-label="breadcrumb" class="breadcrumbNav">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{{url('/')}}" class="first-a">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Reservation</li>
+    </ol>
+  </nav>
 <script>
     function cost(){
     let height=document.getElementById('height').value;

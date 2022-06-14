@@ -5,16 +5,26 @@
 @section('css','singleService.css')
  {{-- To add home body --}}
 @section('content')
+
 <main>
+    <nav aria-label="breadcrumb" class="breadcrumbNav">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{url('/')}}" class="first-a">Services</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{$service->service_name}}</li>
+        </ol>
+      </nav>
     <div class="container">
-        <div class="row">
+
+        <div class="row content">
             <div class="col-lg-6">
                 <img src="{{url('/images/services/'.$service->service_image)}}" height="100%" width="100%">
             </div>
-            <div  class="col-lg-6">
-                <h1 class="text-start">{{$service->service_name}}</h1>
-                <p class="text-start">{{$service->service_description}}</p>
-                <span class="text-start" style="float:left">Cost: <b>{{$service->service_cost}}<b></span>
+            <div  class="col-lg-6 text-start">
+                <h1>{{$service->service_name}}</h1>
+                <span>Cost: <b>{{$service->service_cost}}</b></span>
+                <p>{{$service->service_description}}</p>
+                <a href="" class="btn">Reserve NOW</a>
+                
                 <div class="clearfix"></div>
             </div>
         </div>

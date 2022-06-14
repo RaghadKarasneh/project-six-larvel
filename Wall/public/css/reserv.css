@@ -19,3 +19,18 @@ form input{
   .col-lg-4{
     margin-right: 150px;
   }
+  .breadcrumbNav{
+    background: rgb(0 0 0 / 10%) !important;
+     padding: 9px 40px;
+     margin-bottom: 100px;
+  }
+  .breadcrumb{
+    --bs-breadcrumb-margin-bottom:0!important;
+    padding:0!important;
+  }
+  .first-a{
+  color: gray;
+     text-decoration: none;}
+     .first-a:hover{
+      color: #d73e49;
+     }

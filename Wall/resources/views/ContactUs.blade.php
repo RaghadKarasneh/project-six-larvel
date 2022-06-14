@@ -3,7 +3,12 @@
 @section('title','Contact Us')
 @section('css','contact.css')
 @section('content')
-
+<nav aria-label="breadcrumb" class="breadcrumbNav">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{{url('/')}}" class="first-a">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+    </ol>
+  </nav>
 
 <div class="container " >
     <!--Section: Contact v.2-->

@@ -5,7 +5,12 @@
 @section('css','about.css')
  {{-- To add home body --}}
 @section('content')
-
+<nav aria-label="breadcrumb" class="breadcrumbNav">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{url('/')}}" class="first-a">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">About Us</li>
+  </ol>
+</nav>
 <br>
 <section class="about" id="about">
     <div class="container">

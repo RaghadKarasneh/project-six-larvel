@@ -248,8 +248,7 @@ if($editUser->is_organization == 1){
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center"> 2021 © Ample Admin brought to you by <a
-                    href="https://www.wrappixel.com/">wrappixel.com</a>
+            <footer class="footer text-center">Copyright W(ALL) © 2022. All rights reserved.
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->

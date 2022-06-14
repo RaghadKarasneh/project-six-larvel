@@ -12,11 +12,16 @@
             {{-- Start hero section --}}
             <div class="hero">
 
-                <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
+                {{-- <video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
                      <source src="/images/hero.mp4" type="video/mp4">
                   <source src="/images/hero.mp4" type="video/mp4">
                   
-                  </video>
+                  </video> --}}
+                  <video id="bgvid" playsinline autoplay muted loop>
+                    <source src="/images/hero.mp4" type="video/mp4">
+                 
+                 
+                 </video>
                   <div id="polina">
                     <h1 class="text-center">Because painting is by nature a <span class="red-concept">luminous</span> language</h1>
                   <?php 
