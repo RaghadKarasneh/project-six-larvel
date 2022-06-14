@@ -21,35 +21,41 @@ class WallProject extends Controller
         $id=null;
         $service= Services::all();
         $display="none";
-        return view('home',compact('service','id','display'));
+        $displayNav="inline-block";
+        return view('home',compact('service','id','display','displayNav'));
 
     }
     public function showHomePageGuest(){
       $service= Services::all();
       $display="inline-block";
-      return view('home',compact('service','display'));
+      $displayNav="none";
+      return view('home',compact('service','display','displayNav'));
 
   }
     public function showFooter(){
         return view('footer');
     }
     public function singleService($id){
+      $displayNav="none";
         $service= Services::find($id);
-        return view('singleService',compact('service'));
+        return view('singleService',compact('service','displayNav'));
 
     }
     public function showAboutUs(){
-        return view('about');
+      $displayNav="none";
+        return view('about',compact('displayNav'));
     }
     public function showing($id){
         $info=User::find($id);
-        return view('user_info',compact('info'));
+        $displayNav="none";
+        return view('user_info',compact('info','displayNav'));
     }
     
 
       public function updateInfo($id){
         $update=user::find($id);
-        return view('update_info',['update'=>$update]);
+        $displayNav="none";
+        return view('update_info',compact('update','displayNav'));
       }
       
       public function update_i(Request $request, $id){
@@ -75,10 +81,12 @@ class WallProject extends Controller
 
 
       public function addvol(){
-        return view('v_reg');}
+        $displayNav="none";
+        return view('v_reg',compact('displayNav'));}
 
 
       public function saveInfo(Request $request){
+        
         $add=new volunteers();
         $add->first_name=$request->input('firstname');
         $add->last_name=$request->input('lastname');
@@ -96,7 +104,8 @@ class WallProject extends Controller
         ');
       }
       public function contact(){
-        return view('ContactUs');
+        $displayNav="none";
+        return view('ContactUs',compact('displayNav'));
       }
       public function contactInfo(Request $request){
         $contact=new Contact();

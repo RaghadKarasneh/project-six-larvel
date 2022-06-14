@@ -13,12 +13,16 @@ class AuthController extends Controller
 
     public function index()
     {
-        return view('auth.login');
+        $displayNav="none";
+      
+        return view('auth.login',compact('displayNav'));
     }  
 
     public function registration()
     {
-        return view('auth.registration');
+        $displayNav="none";
+      
+        return view('auth.registration',compact('displayNav'));
     }
 
     public function postLogin(Request $request)

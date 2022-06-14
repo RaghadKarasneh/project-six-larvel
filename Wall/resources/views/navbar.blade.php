@@ -27,33 +27,21 @@
         <div class="collapse navbar-collapse borderXwidth" id="navbarSupportedContent">
         <ul class="navbar-nav navbar-direction">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="{{url('/home')}}">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" href="{{url('/about-us')}}">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
+                <a class="nav-link" href="/reservation/id/{{Session('id')}}">Reservation</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="/info/{{Session('id')}}" style="display:{{$displayNav}}">Your Account</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
+                <a class="nav-link" href="{{url('/contact-us')}}">Contact Us</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-            </a>
-            <ul class="dropdown-menu borderXwidth" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Home</a></li>
-                <li><a class="dropdown-item" href="#">Services</a></li>
-                <li><a class="dropdown-item" href="#">Projects</a></li>
-                <li><a class="dropdown-item" href="#">About Us</a></li>
-                <li><a class="dropdown-item" href="#">Contact Us</a></li>
-                <li><hr class="dropdown-divider"></li>
-            </ul>
-            </li>
+   
             
         </ul>
         </div>

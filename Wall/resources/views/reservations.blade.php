@@ -32,7 +32,7 @@
             <select  class="mb-3" name="service" id="cars">
                 @foreach ($services as $ser)
                     <option value="{{$ser->id}}">{{$ser->service_name}}</option>  
-                    <input type="hidden" name="price" id="price" value="{{$ser->service_cost}}"> 
+                    {{-- <input type="hidden" name="price" id="price" value="{{$ser->service_cost}}">  --}}
                     {{-- <label for="">Height</label>
                     <input type="number" name="height" id="height" required value="1">
                     <label for="">Width</label>

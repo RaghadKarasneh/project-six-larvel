@@ -69,11 +69,12 @@ class AdminController extends Controller
 
         $file= $request->file('service_image');
         $filename=$file->getClientOriginalName();
-        $file-> move(public_path('admin/Images'), $filename);
+        $file-> move(public_path('/images/services/'), $filename);
         $image= $filename;
 
         $newService->service_name=request('service_name');
         $newService->service_cost=request('service_cost');
+        $newService->service_description=request('service_description');
         $newService->service_image=$image;
         $newService->save();
         return redirect('AdminServices')->with('message','Service added succefully');
@@ -142,7 +143,10 @@ class AdminController extends Controller
     //Contact US
     public function reservations($id){
         $services= Services::all();
-        return view('reservations', compact('services','id'));
+        $id= User::find($id);
+
+        $displayNav="inline-block";
+        return view('reservations', compact('services','id','displayNav'));
     }
     public function bringReservations($id){
         $service_id=request('service');
@@ -154,7 +158,7 @@ class AdminController extends Controller
         $reservation = new Reservation();
         $reservation->user_id=$id;
         $reservation->service_id=$service_id;
-        $reservation->user_address=$user->address;
+        // $reservation->user_address=$user->address;
         $reservation->cost=$service->service_cost;
         // $userInfo = new User();
         // 'user_id'->$user_id;
@@ -163,6 +167,8 @@ class AdminController extends Controller
         $reservation->save();
 
         return redirect('reservation/id/{{$id}}')->with('message', 'Your message is sent, we will respond soon');
+        // Redirect::to('reservation/id?id='. $id);
+        // return redirect()->route('reservation', [$id]);
     }
 
 

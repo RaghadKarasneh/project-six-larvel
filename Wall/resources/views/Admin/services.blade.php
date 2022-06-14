@@ -223,7 +223,7 @@
                                         <tr>
                                             <td>{{$service->id}}</td>
                                             <td>{{$service->service_name}}</td>
-                                            <td style="width:30%;"><img src="admin/Images/{{$service->service_image}}" width="20%" alt="service img"></td>
+                                            <td style="width:30%;"><img src="images/services/{{$service->service_image}}" width="20%" alt="service img"></td>
                                             <td>{{$service->service_cost}}</td>
                                             <td><a href="AdminEditSer/{{$service->id}}">Edit</a></td>
                                             <td><a href="AdminDeleteSer/{{$service->id}}">Delete</a></td>

@@ -25,8 +25,8 @@
                 //   {$display="block";
                 //   }else{
                 //     $display="none";}?>
-                    <a href="" class="btn" style="display:{{$display}}">SIGN UP</a>
-                    <a href="" class="btn" style="display:{{$display}}">SIGN IN</a>
+                    <a href="/registration" class="btn" style="display:{{$display}}">SIGN UP</a>
+                    <a href="/login" class="btn" style="display:{{$display}}">SIGN IN</a>
                   </div>
             </div>
             {{-- End hero section --}}
@@ -179,21 +179,21 @@
                   <div class="carousel-item active">
                     <img src="/images/project1.png" class="d-block w-100" height="900px" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>First slide label</h5>
-                      <p>Some representative placeholder content for the first slide.</p>
+                      <h5>RainBow Building</h5>
+                      {{-- <p>Some representative placeholder content for the first slide.</p> --}}
                     </div>
                   </div>
                   <div class="carousel-item">
                     <img src="/images/project2.png" class="d-block w-100"  height="900px" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
+                      <h5>The colorfull School</h5>
+                      {{-- <p>Some representative placeholder content for the second slide.</p> --}}
                     </div>
                   </div>
                   <div class="carousel-item">
                     <img src="/images/project3.png" class="d-block w-100"  height="900px" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Third slide label</h5>
+                      <h5>African Beauty</h5>
                       <p>Some representative placeholder content for the third slide.</p>
                     </div>
                   </div>
