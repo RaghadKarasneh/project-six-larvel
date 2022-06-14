@@ -156,7 +156,7 @@ class AdminController extends Controller
         $user = User::find($id);
         $service = Services::find($service_id);
         $reservation = new Reservation();
-        $reservation->user_id=$id;
+        $reservation->user_id=1;
         $reservation->service_id=$service_id;
         // $reservation->user_address=$user->address;
         $reservation->cost=$service->service_cost;

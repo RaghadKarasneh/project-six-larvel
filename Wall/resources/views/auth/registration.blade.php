@@ -15,7 +15,7 @@
                             <div class="form-group row">
                                 <label for="first_name" class="col-md-4 col-form-label text-md-right">First Name</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="first_name" class="form-control" name="first_name" required autofocus>
+                                    <input type="text" id="first_name" class="form-control" name="first_name" required autofocus value="{{old('first_name')}}">
                                     @if ($errors->has('first_name'))
                                         <span class="text-danger">{{ $errors->first('first_name') }}</span>
                                     @endif
@@ -25,7 +25,7 @@
                             <div class="form-group row">
                                 <label for="last_name" class="col-md-4 col-form-label text-md-right">Last Name</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="last_name" class="form-control" name="last_name" required autofocus>
+                                    <input type="text" id="last_name" class="form-control" name="last_name" required autofocus value="{{old('last_name')}}">
                                     @if ($errors->has('last_name'))
                                         <span class="text-danger">{{ $errors->first('last_name') }}</span>
                                     @endif
@@ -47,7 +47,7 @@
                             <div class="form-group row">
                                 <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="email_address" class="form-control" name="email" required autofocus>
+                                    <input type="text" id="email_address" class="form-control" name="email" required autofocus value="{{old('email')}}">
                                     @if ($errors->has('email'))
                                         <span class="text-danger">{{ $errors->first('email') }}</span>
                                     @endif
@@ -58,7 +58,7 @@
                             <div class="form-group row">
                                 <label for="phone_number" class="col-md-4 col-form-label text-md-right">Phone Number</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="phone_number" class="form-control" name="phone_number" required autofocus>
+                                    <input type="text" id="phone_number" class="form-control" name="phone_number" required autofocus value="{{old('phone_number')}}">
                                     @if ($errors->has('phone_number'))
                                         <span class="text-danger">{{ $errors->first('phone_number') }}</span>
                                     @endif
@@ -68,7 +68,7 @@
                             <div class="form-group row">
                                 <label for="city" class="col-md-4 col-form-label text-md-right">City</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="city" class="form-control" name="city" required autofocus>
+                                    <input type="text" id="city" class="form-control" name="city" required autofocus value="{{old('city')}}">
                                     @if ($errors->has('city'))
                                         <span class="text-danger">{{ $errors->first('city') }}</span>
                                     @endif
@@ -78,7 +78,7 @@
                             <div class="form-group row">
                                 <label for="address" class="col-md-4 col-form-label text-md-right">Address</label>
                                 <div class="col-md-6">
-                                    <input type="text" id="address" class="form-control" name="address" required autofocus>
+                                    <input type="text" id="address" class="form-control" name="address" required autofocus value="{{old('address')}}">
                                     @if ($errors->has('address'))
                                         <span class="text-danger">{{ $errors->first('address') }}</span>
                                     @endif
