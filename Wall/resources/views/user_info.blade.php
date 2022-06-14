@@ -6,7 +6,12 @@
 <br>
 
 
-
+<nav aria-label="breadcrumb" class="breadcrumbNav">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{url('/')}}" class="first-a">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Your Profile</li>
+  </ol>
+</nav>
 <main>
   <img src="/images/logo.png">
   <div class="container text-center">
