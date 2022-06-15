@@ -30,8 +30,9 @@
                 //   {$display="block";
                 //   }else{
                 //     $display="none";}?>
-                    <a href="/registration" class="btn" style="display:{{$display}}">SIGN UP</a>
-                    <a href="/login" class="btn" style="display:{{$display}}">SIGN IN</a>
+                    {{-- <a href="/registration" class="btn" style="display:{{$display}}">SIGN UP</a> --}}
+                   
+                    <a href="/login" class="btn col-lg-6" style="display:{{$display}}">Reserve Now</a>
                   </div>
             </div>
             {{-- End hero section --}}
@@ -64,7 +65,7 @@
                                 <i class="fa-solid fa-clock fa-4x"></i>
                                 <h3>We are ready to serve you 24 hours a week</h3>
                         </div>
-                    </div>
+                    </div> 
                     <!-- / End Single Service -->
                 </div>
                 <div class="row">
@@ -90,10 +91,10 @@
             <div class="clearfix"></div>
 
             {{-- Start services section --}}
-            <div class="services">
+             <div class="services">
                 <h2 class="title text-center">OUR <span>SERVICES</span></h2>
                 <div class="row">
-                    <div class="col-lg-6">
+                    {{-- <div class="col-lg-6">
                         <img src="/images/serviceHomePage3.png" height="auto" width="100%">
                     </div>
 
@@ -101,10 +102,10 @@
                         <img src="/images/serviceHomePage2.png" height="auto" width="100%">
                         <p class="text-start">We provide you all what you need to make your wall, house, or even your organization beutifaul as much as you want.</p>
                         <div class="text-start services-points">
-                            <div class="row">
+                            <div class="row"> --}} 
                                 {{-- <div class="col-lg-6"> --}}
                                     {{-- sevice 1 --}}
-                                    @foreach ($service as $value)
+                                    {{-- @foreach ($service as $value)
                                        
                                     
                                     <i class="fa-solid fa-angles-right">   
@@ -112,7 +113,7 @@
                                 </i>
                                     
                                     <br>
-                                    <br>
+                                    <br> --}}
                                         {{-- sevice 2 --}}
                                     {{-- <i class="fa-solid fa-angles-right"></i>   
                                     <a href=""> EXTERIOR PAINTAING</a>
@@ -149,13 +150,55 @@
                                         {{-- <i class="fa-solid fa-angles-right"></i>
                                         <a href=""> WALLPAPER REMOVAL</a>
                                 </div> --}} 
-                                @endforeach
+                                {{-- @endforeach
                             </div>
                         </div>
                     </div>
 
-                </div>
-           
+                </div> --}} 
+                <div class="py-5 service-12">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-lg-6">
+                              
+                              {{-- <h4 class="my-3">Awesome with Extra Ordinary Flexibility Features</h4>
+                              <h6 class="font-weight-light subtitle">You can relay on our amazing features list and also our customer services will be great experience for you without doubt and in no-time</h6> --}}
+                              <div class="row">
+                                  
+                                    @foreach ($service as $value)
+                                    <div class="col-lg-6 mt-3 text-start">
+                                    <h4 class="font-weight-medium" class="badge badge-info rounded-pill px-3 py-1 font-weight-light">{{$value->service_name}}</h4>
+                                       <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad error delectus at non alias? Itaque accusamus explicabo qui dicta adipisci et, at enim repudiandae maiores, libero nesciunt provident beatae? Doloribus.</h6>
+                                    <a href="{{url('/single-service/id/'.$value->id)}}" class="btn btn-info-gradiant btn-md border-0 text-white"> More Detailes</a>
+                                
+                                    
+              
+                              </div>
+                              <br>
+                                @endforeach
+                              </div>
+                              </div>
+                          <div class="col-lg-6">
+                              <div class="row wrap-service12">
+                                  <div class="col-md-6 images-box">
+                                      <div class="row ">
+                                          <div class="col-md-12 img-hover mb-4"><img src="https://img.atlasobscura.com/TidYOIt7_pQCdrpzNFQ5LRINe1wvSEG1I0PJDOpvxDY/rt:fill/w:1200/el:1/q:81/sm:1/scp:1/ar:1/aHR0cHM6Ly9hdGxh/cy1kZXYuczMuYW1h/em9uYXdzLmNvbS91/cGxvYWRzL2Fzc2V0/cy9kMDNkMzA4NS04/NjJmLTRkMGEtYTFi/ZS1iNWMzNjgxNjgz/ZTE5ZGZiMGVhMmYx/MDAxMzU3MzNfYW1t/YW4uMy5tb3JlLm11/cmFscy5qcGc.jpg" class="rounded img-shadow img-fluid" alt="wrapkit" /></div>
+                                          <div class="col-md-12 img-hover mb-4"><img src="https://images.squarespace-cdn.com/content/v1/55c5193be4b0620bb2eae3e3/1585963093245-9DLP7IBBZNFHQ8XBHCX9/hom-silver-spur-mural-sm.jpg" class="rounded img-shadow img-fluid" alt="wrapkit" /></div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-6 uneven-box">
+                                      <div class="row">
+                                          <div class="col-md-12 img-hover mb-4"><img src="https://english.alaraby.co.uk/sites/default/files/styles/medium_16_9/public/media/images/9514DFB3-4411-4621-9FD0-CCD0DD93A4D9.jpg?h=dbfb23f9&itok=CFTSHLoM" class="rounded img-shadow img-fluid" alt="wrapkit" /></div>
+                                          <div class="col-md-12 img-hover mb-4"><img src="https://i.pinimg.com/736x/ce/68/28/ce6828aa0737ee22891dc87211001b3b.jpg
+                                            " class="rounded img-shadow img-fluid" alt="wrapkit" /></div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+             </div>
         </div>
         {{-- End services section --}}
         <div class="clearfix"></div>

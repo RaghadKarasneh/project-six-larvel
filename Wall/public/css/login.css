@@ -69,9 +69,14 @@
   {
       margin-left: 0;
       margin-right: 0;
-      opacity: .9;
-      
-      
+      opacity: .9;   
+  }
+  .have-account{
+    margin-top: 20px;
+  }
+  .have-account a{
+    font-size: 17px;
+    text-decoration: none;
   }
   .footer-copyright{
     background-color: transparent !important;

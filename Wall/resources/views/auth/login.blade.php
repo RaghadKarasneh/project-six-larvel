@@ -37,10 +37,15 @@
                               </div>
                           </div>
   
-                          <div class="col-md-6 offset-md-4">
-                              <button type="submit" class="btn btn-primary">
+                          <div class="col-md-12">
+                              <button type="submit" class="btn btn-primary col-lg-4 text-center offset-md-5">
                                   Login
                               </button>
+                              <p class="offset-md-2 text-center have-account" >
+                                Don't have an account?
+                                <a href="/registration" style="font-size: 17px">
+                                <br>Register Now</a></p>
+                              
                           </div>
                       </form>
                         

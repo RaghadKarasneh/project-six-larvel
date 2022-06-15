@@ -142,13 +142,20 @@ class AdminController extends Controller
 
     //Contact US
     public function reservations($id){
+        // dd($id);
         $services= Services::all();
-        $id= User::find($id);
-
+        $data= User::find($id);
+        $userId=$data->id;
+        // dd($userId);
         $displayNav="inline-block";
-        return view('reservations', compact('services','id','displayNav'));
+        return view('reservations', compact('services','userId','displayNav'));
     }
     public function bringReservations($id){
+        // dd($id);
+        // foreach($id as $data){
+
+        //     dd($data);
+        // }
         $service_id=request('service');
         $service=request('service');
         $pay=request('pay');
@@ -156,7 +163,7 @@ class AdminController extends Controller
         $user = User::find($id);
         $service = Services::find($service_id);
         $reservation = new Reservation();
-        $reservation->user_id=1;
+        $reservation->user_id=$id;
         $reservation->service_id=$service_id;
         // $reservation->user_address=$user->address;
         $reservation->cost=$service->service_cost;
@@ -166,9 +173,11 @@ class AdminController extends Controller
         $reservation->service_image=$service_image;
         $reservation->save();
 
-        return redirect('reservation/id/{{$id}}')->with('message', 'Your message is sent, we will respond soon');
+        return redirect('reservation/id/'.$id)->with('message', 'Your message is sent, we will respond soon');
         // Redirect::to('reservation/id?id='. $id);
         // return redirect()->route('reservation', [$id]);
+
+        
     }
 
 

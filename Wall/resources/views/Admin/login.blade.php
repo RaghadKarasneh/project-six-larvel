@@ -4,6 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords"
@@ -23,6 +29,12 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+<style>
+   form{
+       font-size: larger;
+       margin-top: 10%;
+   }
+</style>
 </head>
 
 <body>
@@ -88,7 +100,7 @@
         <!-- ============================================================== -->
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
-        <div class="page-wrapper">
+        <div class="page-wrapper" style="background-image: url('images/paint.jpg'); background-repeat:no-repeat; min-height: calc(100vh - 130px);">
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
             <!-- ============================================================== -->
@@ -120,7 +132,7 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                <div class="container">
+                <div class="container col-8 rounded mt-5" style="background: rgba(0,0,0,0.5); padding:20px 60px;">
                     <div class="container">
                         @if (session('message'))
                             <div class="alert alert-danger" role="alert">
@@ -128,7 +140,7 @@
                             </div>
                         @endif
                     </div>
-                <form action="/AdminLoginCheck" method="POST" style="text-align: center; margin-top:5%;">
+                {{-- <form action="/AdminLoginCheck" method="POST" style="text-align: center; margin-top:5%;">
                     @csrf
                     <div style="width: 83%;"><label style="font-size: larger; text-align:left;">Email:</label></div><br>
                     <input style="width: 20%; height:30px;" class="mb-5" type="text" name="adminEmail" required><br>
@@ -136,9 +148,26 @@
                     <input style="width: 20%; height:30px;" class="mb-5" type="password" name="adminPass" required><br>
 
                     <button style="position: relative; left:45%; width:10%;" class="btn btn-danger  d-none d-md-block pull-right  hidden-xs hidden-sm waves-effect waves-light text-white" type="submit">Login</button>
-                </form>
-                                        
+                </form> --}}
+                
+                {{-- //////////// --}}
+                
+                <form class="col-4 container" action="/AdminLoginCheck" method="POST">
+                    @csrf
+                    <div class="form-group">
+                      <label for="exampleInputEmail1" style="color:white;">Email address:</label>
+                      <input type="text" name="adminEmail"  class="form-control mb-4" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                      
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1" style="color:white;">Password:</label>
+                      <input type="password" name="adminPass" class="form-control mb-4" id="exampleInputPassword1" placeholder="Password" required>
+                    </div>
+                    
+                    <button style="position: relative; left:40%; font-size: medium;" class="btn btn-danger px-4 mb-5 d-none d-md-block pull-right  hidden-xs hidden-sm waves-effect waves-light text-white" type="submit">Login</button>
+                  </form>
 
+                {{-- //////////// --}}
                             </div>
                         </div>
                     </div>

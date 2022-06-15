@@ -48,7 +48,8 @@ class AuthController extends Controller
         // }
         $users = DB::select('select * from users where is_deleted=0');
         foreach ($users as $user) {
-            if($user->email == $input['email']){
+          
+             if($user->email == $input['email']){
                 $id=$user->id;
                 if(($user->password == $input['password']) && ($user->is_admin == 0)){
                     $user->is_login=1;
@@ -57,7 +58,7 @@ class AuthController extends Controller
                         $id
                     ]);
                     $display="none";
-                    return redirect('/home/id/'.$id)->with('id',$user->id);
+                    return redirect('reservation/id/'.$id)->with('id',$user->id);
                 }else{
                     if($users[count($users)-1]->id == $user->id){
                     return redirect('/login')->with('message','Email or password is wrong');
