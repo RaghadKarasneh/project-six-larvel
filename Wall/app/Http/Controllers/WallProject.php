@@ -95,7 +95,7 @@ class WallProject extends Controller
         $add->description=$request->input('description');
         $add->save();
         
-        return redirect('home')->with('message','Thanks for all you do! ...
+        return redirect('/')->with('message','Thanks for all you do! ...
          you make our dream work.
         All of your volunteer work is greatly appreciated.
         We are so grateful for your hard work!
@@ -115,7 +115,7 @@ class WallProject extends Controller
         $contact->subject=$request->input('subject');
         $contact->message=$request->input('message');
         $contact->save();
-        return redirect('/home');
+        return redirect('/');
       }
       
 }

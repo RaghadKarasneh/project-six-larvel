@@ -15,8 +15,10 @@ class CreateReservationsTable extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
-            $table->integer('service_id');
+            // $table->integer('user_id');
+            // $table->integer('service_id');
+            $table->foreignID('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreignID('service_id')->references('id')->on('services')->onDelete('cascade');
             $table->string('user_address');
             $table->string('cost');
             $table->string('pay');

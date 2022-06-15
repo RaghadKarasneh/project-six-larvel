@@ -50,6 +50,9 @@ Route::get('dashboard', [AuthController::class, 'dashboard']);
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/contact-us', [WallProject::class, 'contact']);
 Route::post('/contact-us-info', [WallProject::class, 'contactInfo']);
+Route::get('/reservation/id/', [AuthController::class, 'index']);
+Route::get('/reservation/id/{id}', [AdminController::class, 'reservations']);
+Route::post('/bringReservation/id/{id}', [AdminController::class, 'bringReservations']);
 
 
 // Admin
@@ -68,6 +71,6 @@ Route::get('/AdminDeleteUser/{id}', [AdminController::class, 'deleteUser']);
 Route::get('/chart', [AdminController::class, 'barChart']);
 Route::get('/AdminLogin', [AdminController::class, 'viewLogin']);
 Route::post('/AdminLoginCheck', [AdminController::class, 'Login']);
-Route::get('/reservation/id/', [AuthController::class, 'index']);
-Route::get('/reservation/id/{id}', [AdminController::class, 'reservations']);
-Route::post('/bringReservation/id/{id}', [AdminController::class, 'bringReservations']);
+Route::get('/AdminContacts', [AdminController::class, 'showContacts']);
+Route::get('/AdminViewCon/{id}', [AdminController::class, 'showMessage']);
+Route::get('/AdminVolunteers', [AdminController::class, 'showVolunteers']);

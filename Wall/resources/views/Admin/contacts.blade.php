@@ -14,16 +14,15 @@
     <title>W(all) Admin</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="admin/plugins/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/admin/plugins/images/favicon.png">
     <!-- Custom CSS -->
-    <link href="admin/plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="admin/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
-    <!-- Custom CSS -->
-    <link href="admin/css/style.min.css" rel="stylesheet">
-    {{-- jquery --}}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js" integrity="sha512-vBmx0N/uQOXznm/Nbkp7h0P1RfLSj0HQrFSzV8m7rOGyj30fYAOKHYvCNez+yM8IrfnW0TCodDEjRqf6fodf/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    {{-- end jquery --}}
+   <link href="/admin/css/style.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 </head>
 
 <body>
@@ -54,13 +53,13 @@
                         <!-- Logo icon -->
                         <b class="logo-icon">
                             <!-- Dark Logo icon -->
-                            <img src="admin/plugins/images/logo-icon.png" alt="homepage" />
+                            <img src="/admin/plugins/images/logo-icon.png" alt="homepage" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span class="logo-text">
                             <!-- dark Logo text -->
-                            <img src="admin/plugins/images/logo-text.png" alt="homepage" />
+                            <img src="/admin/plugins/images/logo-text.png" alt="homepage" />
                         </span>
                     </a>
                     <!-- ============================================================== -->
@@ -76,7 +75,13 @@
                 <!-- End Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
-                    <h3 style="color: white; margin-left:2%; margin-top:1%;">Dashboard</h3>
+                    <h3 style="color: white; margin-left:2%; margin-top:1%;">Contacts</h3>
+                    <ul class="navbar-nav d-none d-md-block d-lg-none">
+                        <li class="nav-item">
+                            <a class="nav-toggler nav-link waves-effect waves-light text-white"
+                                href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                        </li>
+                    </ul>
                     <!-- ============================================================== -->
                     <!-- Right side toggle and nav items -->
                     <!-- ============================================================== -->
@@ -109,7 +114,7 @@
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
-                      
+                        
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/AdminUsers"
                                 aria-expanded="false">
@@ -165,7 +170,7 @@
             {{-- <div class="page-breadcrumb bg-white">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Dashboard</h4>
+                        <h4 class="page-title">Basic Table</h4>
                     </div>
                     
                 </div>
@@ -179,108 +184,63 @@
             <!-- ============================================================== -->
             <div class="container-fluid">
                 <!-- ============================================================== -->
-                <!-- Three charts -->
+                <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                <div class="row justify-content-center">
-                    <div class="col-lg-4 col-md-12">
-                        <div class="white-box analytics-info">
-                            <h3 class="box-title">Total Number of Users</h3>
-                            <ul class="list-inline two-part d-flex align-items-center mb-0">
-                                <li>
-                                    <a href="AdminUsers" class="counter text-success" style="font-size: large">View Users</a>
-                                </li>
-                                <li class="ms-auto"><span class="counter text-success"><?php echo $usersCount; ?></span></li>
-                            </ul>
+                <div class="container">
+                    @if (session('message'))
+                        <div class="alert alert-success" role="alert">
+                            {{session('message')}}
                         </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="white-box analytics-info">
-                            <h3 class="box-title">Total Number of Services</h3>
-                            <ul class="list-inline two-part d-flex align-items-center mb-0">
-                                <li>
-                                    <a href="AdminServices" class="counter text-purple" style="font-size: large">View Services</a>
-                                </li>
-                                <li class="ms-auto"><span class="counter text-purple"><?php echo $servicesCount; ?></span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="white-box analytics-info">
-                            <h3 class="box-title">Total Number of Reservations</h3>
-                            <ul class="list-inline two-part d-flex align-items-center mb-0">
-                                <li>
-                                    <a href="AdminReservations" class="counter text-info" style="font-size: large">View Reservations</a>
-                                </li>
-                                <li class="ms-auto"><span class="counter text-info"><?php echo $reservationsCount; ?></span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    @endif
                 </div>
-                <!-- ============================================================== -->
-                <!-- PRODUCTS YEARLY SALES -->
-                <!-- ============================================================== -->
                 <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="col-sm-12">
                         <div class="white-box">
-                            <h3 class="box-title">Yearly Provided Services</h3>
-                            <div class="d-md-flex">
-                                <ul class="list-inline d-flex ms-auto">
-                                    <li class="ps-3">
-                                        <h5><i class="fa fa-circle me-1 text-info"></i>Paid</h5>
-                                    </li>
-                                    <li class="ps-3">
-                                        <h5><i class="fa fa-circle me-1 text-inverse"></i>Unpaid</h5>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div id="ct-visits" style="height: 405px;">
-                                <div class="chartist-tooltip" style="top: -17px; left: -12px;"><span
-                                        class="chartist-tooltip-value">6</span>
-                                </div>
+                            {{-- <h3 class="box-title">Users</h3> --}}
+                            {{-- <p class="text-muted">Add class <code>.table</code></p> --}}
+                            <div class="table-responsive">
+                                <table class="table text-nowrap">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-top-0">#ID</th>
+                                            <th class="border-top-0">First Name</th>
+                                            <th class="border-top-0">Last Name</th>
+                                            <th class="border-top-0">Email</th>
+                                            <th class="border-top-0">Subject</th>
+                                            <th class="border-top-0">Message</th>
+                                            <th class="border-top-0">View Message</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($contacts as $con)
+                                        <tr>
+                                            <td>{{$con->id}}</td>
+                                            <td>{{$con->first_name}}</td>
+                                            <td>{{$con->last_name}}</td>
+                                            <td>{{$con->email}}</td>
+                                            <td>{{$con->subject}}</td>
+                                            <td>{{$con->message}}</td>
+                                            <td><a href="AdminViewCon/{{$con->id}}">View </a></td>
+                                        </tr>
+                                        @endforeach
+                                        
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
-                {{-- Chart///////////////////////////////////////////////////// --}}
-                {{-- <div style="width:900px; height:400px; margin:auto;">
-                    <canvas id="barChart"></canvas>
-                </div>
-                <?php $datas= json_encode($datas); ?>
-                <script>
-                    $(function(){
-                        var datas=<?=$datas?>;
-                        var barCanvas= $("#barChart");
-                        var barChart= new Chart(barCanvas,{
-                            type:'bar';
-                            data:{
-                                labels:['Service1', 'Service2', 'Service3'],
-                                datasets:[
-                                    {
-                                        label: 'Count Of Users',
-                                        data: datas,
-                                        backgroundColor:['red','yellow','green']
-                                    }
-                                ]
-                            },
-                            options:{
-                                scales:{
-                                    yAxes:[{
-                                        ticks:{
-                                            beginAtZero:true
-                                        }
-                                    }]
-                                }
-                            }
-                        });
-                    })
-                </script> --}}
-
-
-
-
-                
-                {{-- end chart ///////////////////////////////////////////////// --}}
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
@@ -303,22 +263,16 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="admin/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/admin/plugins/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="admin/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="admin/js/app-style-switcher.js"></script>
-    <script src="admin/plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <script src="/admin/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/admin/js/app-style-switcher.js"></script>
     <!--Wave Effects -->
-    <script src="admin/js/waves.js"></script>
+    <script src="/admin/js/waves.js"></script>
     <!--Menu sidebar -->
-    <script src="admin/js/sidebarmenu.js"></script>
+    <script src="/admin/js/sidebarmenu.js"></script>
     <!--Custom JavaScript -->
-    <script src="admin/js/custom.js"></script>
-    <!--This page JavaScript -->
-    <!--chartis chart-->
-    <script src="admin/plugins/bower_components/chartist/dist/chartist.min.js"></script>
-    <script src="admin/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-    <script src="admin/js/pages/dashboards/dashboard1.js"></script>
+    <script src="/admin/js/custom.js"></script>
 </body>
 
 </html>

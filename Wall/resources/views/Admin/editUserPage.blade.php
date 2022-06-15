@@ -153,6 +153,20 @@ if($editUser->is_organization == 1){
                                 <span class="hide-menu">Reservations</span>
                             </a>
                         </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/AdminContacts"
+                                aria-expanded="false">
+                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <span class="hide-menu">Contacts</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/AdminVolunteers"
+                                aria-expanded="false">
+                                <i class="fa fa-table" aria-hidden="true"></i>
+                                <span class="hide-menu">Volunteers</span>
+                            </a>
+                        </li>
                     </ul>
 
                 </nav>

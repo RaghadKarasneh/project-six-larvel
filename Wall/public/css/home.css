@@ -284,3 +284,19 @@ a,p,h1,h2,h3,h4,ul {
     margin-top: 0px;
 }
 }
+
+
+@media (max-width:800px){
+.why-us{
+  margin-top: 0;
+}
+.hero{
+  width: 100%;
+}
+#polina{
+  width: 100% !important;
+}
+.hero #polina a{
+  left: 35%;
+}
+}

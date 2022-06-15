@@ -156,7 +156,7 @@ class AdminController extends Controller
 
         //     dd($data);
         // }
-        $height= $request->input('Hight');
+        $height= $request->input('Height');
         $width= $request->input('Width');
         $total= $request->input('cost');
         $file= $request->file('service_image');
@@ -170,8 +170,13 @@ class AdminController extends Controller
         $service_image= $image;
         $user = User::find($id);
         $service = Services::find($service_id);
+        $serviceCost=$service->service_cost;
         $reservation = new Reservation();
         $reservation->user_id=$id;
+        $reservation->height=$height;
+        $reservation->width=$width;
+        $reservation->total=$total;
+        $reservation->cost=$serviceCost;
         $reservation->service_id=$service_id;
         // $reservation->user_address=$user->address;
         // $reservation->cost=$service->service_cost;
@@ -188,7 +193,18 @@ class AdminController extends Controller
         
     }
 
-
+    public function showContacts(){
+        $contacts = DB::select('select * from contacts');
+        return view('Admin.contacts', compact('contacts'));
+    }
+    public function showMessage($id){
+        $conMessage = DB::select('select * from contacts where id=?',[$id]);
+        return view('Admin.conMessage', compact('conMessage'));
+    }
+    public function showVolunteers(){
+        $volunteers = DB::select('select * from volunteers');
+        return view('Admin.volunteers', compact('volunteers'));
+    }
     // Bar Chart
     // public function barChart(){
     //     $service1 = DB::select('select * from reservations where service_id=1');
