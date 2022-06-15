@@ -73,3 +73,10 @@
   .footer-copyright{
     background-color: transparent !important;
   }
+  .have-account{
+    margin-top: 20px;
+  }
+  .have-account a{
+    font-size: 17px;
+    text-decoration: none;
+  }

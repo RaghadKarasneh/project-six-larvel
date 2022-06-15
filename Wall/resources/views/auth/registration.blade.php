@@ -112,6 +112,10 @@
                                 <button type="submit" class="btn btn-primary">
                                     Register
                                 </button>
+                                <p class="have-account" >
+                                    Alreadey have an account?
+                                    <a href="/login" style="font-size: 17px">
+                                    <br>Login Now</a></p>
                             </div>
                         </form>
                           

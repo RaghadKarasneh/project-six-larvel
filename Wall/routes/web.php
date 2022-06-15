@@ -68,5 +68,6 @@ Route::get('/AdminDeleteUser/{id}', [AdminController::class, 'deleteUser']);
 Route::get('/chart', [AdminController::class, 'barChart']);
 Route::get('/AdminLogin', [AdminController::class, 'viewLogin']);
 Route::post('/AdminLoginCheck', [AdminController::class, 'Login']);
+Route::get('/reservation/id/', [AuthController::class, 'index']);
 Route::get('/reservation/id/{id}', [AdminController::class, 'reservations']);
 Route::post('/bringReservation/id/{id}', [AdminController::class, 'bringReservations']);

@@ -141,7 +141,7 @@ class AdminController extends Controller
     }
 
     //Contact US
-    public function reservations($id){
+    public function reservations(Request $request, $id){
         // dd($id);
         $services= Services::all();
         $data= User::find($id);
@@ -150,23 +150,31 @@ class AdminController extends Controller
         $displayNav="inline-block";
         return view('reservations', compact('services','userId','displayNav'));
     }
-    public function bringReservations($id){
+    public function bringReservations(Request $request,$id){
         // dd($id);
         // foreach($id as $data){
 
         //     dd($data);
         // }
-        $service_id=request('service');
+        $height= $request->input('Hight');
+        $width= $request->input('Width');
+        $total= $request->input('cost');
+        $file= $request->file('service_image');
+        $filename=$file->getClientOriginalName();
+        $file-> move(public_path('/images/reservation/'), $filename);
+        $image= $filename;
+
+        $service_id=$id;
         $service=request('service');
         $pay=request('pay');
-        $service_image=request('service_image');
+        $service_image= $image;
         $user = User::find($id);
         $service = Services::find($service_id);
         $reservation = new Reservation();
         $reservation->user_id=$id;
         $reservation->service_id=$service_id;
         // $reservation->user_address=$user->address;
-        $reservation->cost=$service->service_cost;
+        // $reservation->cost=$service->service_cost;
         // $userInfo = new User();
         // 'user_id'->$user_id;
         $reservation->pay=$pay;

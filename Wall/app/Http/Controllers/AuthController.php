@@ -48,8 +48,8 @@ class AuthController extends Controller
         // }
         $users = DB::select('select * from users where is_deleted=0');
         foreach ($users as $user) {
-          
-             if($user->email == $input['email']){
+       
+            if($user->email == $input['email']){
                 $id=$user->id;
                 if(($user->password == $input['password']) && ($user->is_admin == 0)){
                     $user->is_login=1;

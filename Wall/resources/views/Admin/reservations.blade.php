@@ -186,6 +186,7 @@
                                             <th class="border-top-0">Cost (JOD)</th>
                                             <th class="border-top-0">City</th>
                                             <th class="border-top-0">Address</th>
+                                            <th class="border-top-0">Image</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -193,17 +194,16 @@
                                         {{-- Org. --}}
                                         @if ($reservation->is_organization == 0)
                                             <?php $cost= 0; ?>
-                                        @else
-                                            <?php $cost= $reservation->service_cost; ?>
                                         @endif
                                         {{-- reservation --}}
                                         <tr>
                                             <td>{{$reservation->id}}</td>
                                             <td>{{$reservation->first_name}} {{$reservation->last_name}}</td>
                                             <td>{{$reservation->service_name}}</td>
-                                            <td><?php echo $cost; ?></td>
+                                            <td>{{$reservation->service_cost;}}</td>
                                             <td>{{$reservation->city}}</td>
                                             <td>{{$reservation->address}}</td>
+                                            <td style="width:30%;"><img src="images/services/{{$reservation->service_image}}" width="20%" alt="service img"></td>
                                         </tr>
                                         @endforeach
                                     </tbody>

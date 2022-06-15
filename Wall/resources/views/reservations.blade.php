@@ -9,16 +9,7 @@
       <li class="breadcrumb-item active" aria-current="page">Reservation</li>
     </ol>
   </nav>
-<script>
-    function cost(){
-    let height=document.getElementById('height').value;
-    let width=document.getElementById('width').value;
-    let price=document.getElementById('price').value;
-    let finalCost=document.getElementById('finalCost').value=height*width*price;
-    
-    return finalCost;
-}
-</script>
+
 <div class="container" >
     
     <div class="row text-start w-100 fs-5 px-5">
@@ -49,11 +40,11 @@
             <input class="mb-3" type="file"  name="service_image" class="mb-5" required><br><br>
             <label>Calculate Cost:</label><br>
             <label for="">Height</label>
-            <input type="number" name="Height" id="Height" oninput="calc();" required >cm
+            <input type="number" name="Height" id="Height" oninput="calc();" required >m
             <br><label for="">Width</label>&nbsp;
-            <input type="number" name="Width" id="Width" oninput="calc();" required>cm
-            <input type="hidden" name="cost" id="cost"  value="{{$ser->service_cost}}">
-            <br> Total : <input type="number" id="total" name="total"  readonly style="border:1px darkred solid; background:rgb(185, 188, 192); margin-left:11px;">JD<br><br>
+            <input type="number" name="Width" id="Width" oninput="calc();" required>m
+            <input type="hidden" name="cost" id="cost"  value="30">
+            <br> Total : <input type="number" id="total" name="total"  readonly style="border:1px darkred solid; background:rgb(185, 188, 192); margin-left:11px;">JOD<br><br>
                                      
             <button  class="btn btn-danger  d-none d-md-block pull-right  hidden-xs hidden-sm waves-effect waves-light text-white">Send</button>
         </form>

@@ -21,6 +21,9 @@ class CreateReservationsTable extends Migration
             $table->string('cost');
             $table->string('pay');
             $table->string('service_image');
+            $table->integer('height');
+            $table->integer('width');
+            $table->float('total');
             $table->timestamps();
         });
     }

@@ -33,16 +33,23 @@
                 <a class="nav-link" href="{{url('/about-us')}}">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/reservation/id/{{Session('id')}}">Reservation</a>
+                <a class="nav-link" href="/#services">Services</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/info/{{Session('id')}}" style="display:{{$displayNav}}">Your Account</a>
             </li>
+            {{-- <li class="nav-item">
+                <a class="nav-link" href="/info/{{Session('id')}}" style="display:{{$displayNav}}">LOGOUT</a>
+            </li> --}}
+            <li class="nav-item">
+                <a class="nav-link hidden-nav" href="/registration">Sign Up</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link hidden-nav" href="/login">Sign In</a>
+            </li> 
             <li class="nav-item">
                 <a class="nav-link" href="{{url('/contact-us')}}">Contact Us</a>
             </li>
-   
-            
         </ul>
         </div>
     </nav>

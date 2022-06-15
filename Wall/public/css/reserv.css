@@ -34,3 +34,7 @@ form input{
      .first-a:hover{
       color: #d73e49;
      }
+     
+    .navbar .hidden-nav{
+      display: none !important;
+     }
