@@ -73,6 +73,7 @@ class AdminController extends Controller
         $image= $filename;
 
         $newService->service_name=request('service_name');
+        $newService-> service_short_description=request('service_short_description');
         $newService->service_cost=request('service_cost');
         $newService->service_description=request('service_description');
         $newService->service_image=$image;
@@ -93,6 +94,8 @@ class AdminController extends Controller
         }else{
             $service_image= $editService->service_image;
         }
+ 
+        $editService-> service_short_description=request('service_short_description');
         $editService-> service_name=request('service_name');
         $editService-> service_cost=request('service_cost');
         $editService-> service_image=$service_image;

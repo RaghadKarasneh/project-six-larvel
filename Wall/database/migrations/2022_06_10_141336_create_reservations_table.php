@@ -18,8 +18,7 @@ class CreateReservationsTable extends Migration
             // $table->integer('user_id');
             // $table->integer('service_id');
             $table->foreignID('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreignID('service_id')->references('id')->on('services')->onDelete('cascade');
-            $table->string('user_address');
+            $table->foreignID('service_id');
             $table->string('cost');
             $table->string('pay');
             $table->string('service_image');

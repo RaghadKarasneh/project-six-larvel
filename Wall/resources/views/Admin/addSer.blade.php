@@ -211,6 +211,8 @@
                                     <input style="width: 20%; height:30px;" class="mb-3" type="text"  name="service_cost" required><br>
                                     <label>Description:</label><br>
                                     <input style="width: 20%; height:30px;" class="mb-3" type="text"  name="service_description" required><br>
+                                    <label>Short Description:</label><br>
+                                    <input style="width: 20%; height:30px;" class="mb-3" type="text"  name="service_short_description" required><br>
                                     <button style="position: relative; left:4%; width:12%;" class="btn btn-danger  d-none d-md-block pull-right  hidden-xs hidden-sm waves-effect waves-light text-white">Add Service</button>
                                 </form>
                                 

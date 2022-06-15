@@ -168,7 +168,7 @@
                                     @foreach ($service as $value)
                                     <div class="col-lg-6 mt-3 text-start">
                                     <h4 class="font-weight-medium" class="badge badge-info rounded-pill px-3 py-1 font-weight-light">{{$value->service_name}}</h4>
-                                       <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad error delectus at non alias? Itaque accusamus explicabo qui dicta adipisci et, at enim repudiandae maiores, libero nesciunt provident beatae? Doloribus.</h6>
+                                       <h6>{{$value->service_short_description}}</h6>
                                     <a href="{{url('/single-service/id/'.$value->id)}}" class="btn btn-info-gradiant btn-md border-0 text-white"> More Detailes</a>
                                 
                                     
