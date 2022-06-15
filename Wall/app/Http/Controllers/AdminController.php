@@ -189,7 +189,7 @@ class AdminController extends Controller
         $reservation->service_image=$service_image;
         $reservation->save();
 
-        return redirect('reservation/id/'.$id)->with('message', 'Your message is sent, we will respond soon');
+        return redirect('reservation/id/'.$id)->with('message', 'Your message is sent, we will respond soon')->with('id',$id);
         // Redirect::to('reservation/id?id='. $id);
         // return redirect()->route('reservation', [$id]);
 
