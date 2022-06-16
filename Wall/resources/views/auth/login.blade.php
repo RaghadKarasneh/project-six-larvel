@@ -39,7 +39,7 @@
   
                           <div class="col-md-12">
                               <button type="submit" class="btn btn-primary col-lg-4 text-center offset-md-5">
-                                  Login
+                                  Sign In
                               </button>
                               <p class="offset-md-2 text-center have-account" >
                                 Don't have an account?

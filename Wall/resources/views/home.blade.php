@@ -242,21 +242,21 @@
                     <img src="/images/project3.png" class="d-block w-100"  height="800px" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>African Beauty</h5>
-                      <p>Some representative placeholder content for the third slide.</p>
+                     
                     </div>
                   </div>
                   <div class="carousel-item">
                     <img src="/images/project4.png" class="d-block w-100"  height="800px" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
+                      <h5>Chessboard</h5>
+                      
                     </div>
                   </div>
                   <div class="carousel-item">
                     <img src="/images/project5.png" class="d-block w-100"  height="800px" alt="...">
                     <div class="carousel-caption d-none d-md-block">
-                      <h5>Second slide label</h5>
-                      <p>Some representative placeholder content for the second slide.</p>
+                      <h5>Colorful Dream</h5>
+              
                     </div>
                   </div>
                 </div>

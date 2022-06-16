@@ -173,13 +173,13 @@ class AdminController extends Controller
         $service_image= $image;
         $user = User::find($id);
         $service = Services::find($service_id);
-        $serviceCost=$service->service_cost;
+        // $serviceCost=$service->service_cost;
         $reservation = new Reservation();
         $reservation->user_id=$id;
         $reservation->height=$height;
         $reservation->width=$width;
         $reservation->total=$total;
-        $reservation->cost=$serviceCost;
+        $reservation->cost=50;
         $reservation->service_id=$service_id;
         // $reservation->user_address=$user->address;
         // $reservation->cost=$service->service_cost;
@@ -189,7 +189,7 @@ class AdminController extends Controller
         $reservation->service_image=$service_image;
         $reservation->save();
 
-        return redirect('reservation/id/'.$id)->with('message', 'Your message is sent, we will respond soon')->with('id',$id);
+        return redirect('reservation/id/'.$id)->with('message', 'Your order has been sent, we will respond soon')->with('id',$id);
         // Redirect::to('reservation/id?id='. $id);
         // return redirect()->route('reservation', [$id]);
 

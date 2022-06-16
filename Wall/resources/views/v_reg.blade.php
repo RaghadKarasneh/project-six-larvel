@@ -2,8 +2,29 @@
 
 @section('title','volunteer register')
 @section('title','volunteer.css')
+<style>.breadcrumbNav{
+  background: rgb(0 0 0 / 10%) !important;
+   padding: 9px 40px;
+   margin-bottom: 100px;
+}
+.breadcrumb{
+  --bs-breadcrumb-margin-bottom:0!important;
+  padding:0!important;
+}
+.first-a{
+color: gray;
+   text-decoration: none;}
+   .first-a:hover{
+    color: #d73e49;
+   }</style>
 @section('content')
 <br>
+<nav aria-label="breadcrumb" class="breadcrumbNav">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{url('/')}}" class="first-a">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Volunteering</li>
+  </ol>
+</nav>
 <div class="container" >
   <div class="row ">
   
