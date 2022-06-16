@@ -9,7 +9,7 @@
         <div class="row row-cols-4">
 
             <div class="col-lg-12 ">
-                <h1 class="fw-bolder ml-5">User information edit</h1>
+                <h1 class="fw-bolder ml-5">Edit User information</h1>
                 `
                 <form action='{{url('/update/id/'.$update->id)}}' method="post">
 

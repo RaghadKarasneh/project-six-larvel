@@ -35,8 +35,8 @@
                                                                       <div class="m-b-25">
                                                                           {{-- <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image"> --}}
                                                                       </div>
-                                                                      <h1 class="f-w-600">
-                                                                        <span>{{$info->first_name}} </span><span>{{$info->last_name}}</span></h1>
+                                                                      <h2 class="f-w-600">
+                                                                        <span>{{$info->first_name}} </span><span>{{$info->last_name}}</span></h2>
                                                                       <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                                                                   </div>
                                                               </div>

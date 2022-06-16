@@ -191,6 +191,9 @@ a,p,h1,h2,h3,h4,ul {
 .images-box{
   margin-top: 50px;
 }
+.img-fluid{
+  height: 400px !important;
+}
 /*Start Join Us Section*/
 
 .join-us{
@@ -318,6 +321,9 @@ a,p,h1,h2,h3,h4,ul {
 .why-us .row{
     margin-right: 0;
     margin-left: 0;
+}
+.img-fluid{
+  height: auto !important;
 }
 .hero{
   width: 100%;

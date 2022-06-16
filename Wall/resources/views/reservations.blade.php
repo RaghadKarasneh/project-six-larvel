@@ -15,7 +15,7 @@
     
     <div class="row text-start w-100 fs-5 px-5">
 
-     <div class="col-lg-6">
+     <div class="col-lg-8">
         @if (session('message'))
                         <div class="alert alert-success" role="alert">
                             {{session('message')}}

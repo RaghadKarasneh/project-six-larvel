@@ -182,15 +182,15 @@
                               <div class="row wrap-service12">
                                   <div class="col-md-6 images-box">
                                       <div class="row ">
-                                          <div class="col-md-12 img-hover mb-4"><img src="https://images-ext-1.discordapp.net/external/mUGnSiB1AJNJEBi18iH19fVnwjeTRZTYN0lklIfBs4g/https/5.imimg.com/data5/SELLER/Default/2020/9/FE/SB/UH/52786480/new-product-500x500.jpeg" class="rounded img-shadow img-fluid" alt="wrapkit" /></div>
-                                          <div class="col-md-12 img-hover mb-4"><img src="https://images-ext-1.discordapp.net/external/lKPttL-bxvuP7LSn8xkMSRrG1CMO9kGwOEVzBVBQ4Do/https/i.pinimg.com/736x/cb/01/ce/cb01cee7affd46f069a66f264b371ce2.jpg?width=536&height=670" class="rounded img-shadow img-fluid" alt="wrapkit" /></div>
+                                          <div class="col-md-12 img-hover mb-4"><img src="https://cdn.acidcow.com/pics/20131223/acid_picdump_70.jpg" class="rounded img-shadow img-fluid" alt="wrapkit" height="400px"/></div>
+                                          <div class="col-md-12 img-hover mb-4"><img src="https://images-ext-1.discordapp.net/external/lKPttL-bxvuP7LSn8xkMSRrG1CMO9kGwOEVzBVBQ4Do/https/i.pinimg.com/736x/cb/01/ce/cb01cee7affd46f069a66f264b371ce2.jpg?width=536&height=670"  height="400px" class="rounded img-shadow img-fluid" alt="wrapkit"/></div>
                                       </div>
                                   </div>
                                   <div class="col-md-6 uneven-box">
                                       <div class="row">
                                           <div class="col-md-12 img-hover mb-4"><img src="https://i.pinimg.com/736x/ce/68/28/ce6828aa0737ee22891dc87211001b3b.jpg
-                                            " class="rounded img-shadow img-fluid" alt="wrapkit" /></div>
-                                            <div class="col-md-12 img-hover mb-4"><img src="https://freight.cargo.site/w/2000/q/75/i/cc156462cac64b0a9bc6b5095bdbab3e2bd4ba5b7867ff55365a555fd1135e37/IMG_6073.jpg" class="rounded img-shadow img-fluid" alt="wrapkit" /></div>
+                                            " class="rounded img-shadow img-fluid" alt="wrapkit" height="400px"/></div>
+                                            <div class="col-md-12 img-hover mb-4"><img src="https://freight.cargo.site/w/2000/q/75/i/cc156462cac64b0a9bc6b5095bdbab3e2bd4ba5b7867ff55365a555fd1135e37/IMG_6073.jpg" class="rounded img-shadow img-fluid" alt="wrapkit" height="400px"/></div>
                                       </div>
                                   </div>
                               </div>
@@ -225,35 +225,35 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="/images/project1.png" class="d-block w-100" height="900px" alt="...">
+                    <img src="/images/project1.png" class="d-block w-100" height="800px" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>RainBow Building</h5>
                       {{-- <p>Some representative placeholder content for the first slide.</p> --}}
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="/images/project2.png" class="d-block w-100"  height="900px" alt="...">
+                    <img src="/images/project2.png" class="d-block w-100"  height="800px" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>The colorfull School</h5>
                       {{-- <p>Some representative placeholder content for the second slide.</p> --}}
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="/images/project3.png" class="d-block w-100"  height="900px" alt="...">
+                    <img src="/images/project3.png" class="d-block w-100"  height="800px" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>African Beauty</h5>
                       <p>Some representative placeholder content for the third slide.</p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="/images/project4.png" class="d-block w-100"  height="900px" alt="...">
+                    <img src="/images/project4.png" class="d-block w-100"  height="800px" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>Second slide label</h5>
                       <p>Some representative placeholder content for the second slide.</p>
                     </div>
                   </div>
                   <div class="carousel-item">
-                    <img src="/images/project5.png" class="d-block w-100"  height="900px" alt="...">
+                    <img src="/images/project5.png" class="d-block w-100"  height="800px" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>Second slide label</h5>
                       <p>Some representative placeholder content for the second slide.</p>

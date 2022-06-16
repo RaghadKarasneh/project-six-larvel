@@ -178,3 +178,6 @@ p {
 .update:hover{
     color:#fff;
 }
+.user-card-full h2{
+    margin-top: 70px;
+}
