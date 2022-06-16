@@ -80,7 +80,7 @@ a:hover{
     position: relative;
     left: 28%;
     margin-top: 30px;
-    font-size: 17px;
+    font-size: 20px;
     margin-right: 40px;
     transition: 0.5s all ease-in-out;
     padding: 10px 20px;
@@ -285,18 +285,83 @@ a,p,h1,h2,h3,h4,ul {
 }
 }
 
-
-@media (max-width:800px){
+@media (max-width:1024px){
+  #polina{
+    width: 60%;
+  }
+  .why-us{
+    margin-top: 0;
+  }
+  .join-us h1{
+    margin-top: 30px;
+    font-size: 20px;
+  }
+  .join-us p{
+    font-size: 15px;
+  }
+  .join-us a{
+    padding: 0px 20px;
+  }
+}
+@media (max-width:992px){
+  .container-fluied{
+    width: 100%;
+    margin-right: 0;
+  }
+  video{
+    display: none;
+  }
 .why-us{
   margin-top: 0;
+  width: 100%;
+}
+.why-us .row{
+    margin-right: 0;
+    margin-left: 0;
 }
 .hero{
   width: 100%;
 }
 #polina{
   width: 100% !important;
+  margin-top: 0;
 }
 .hero #polina a{
   left: 35%;
 }
+.services .row{
+  text-align: center;
 }
+.service-12 .wrap-service12 .uneven-box{
+  margin-top: 0;
+}
+.join-us{
+  background-image:unset
+}
+.join-us .col-lg-6{
+  margin-left: 0;
+}
+.join-us h1{
+  font-size: 3rem;
+}
+.join-us p{
+  font-size: 20px;
+}
+.join-us a{
+  padding: 10px 20px;
+}
+.join-us h1,
+.join-us p{
+  color: black;
+}
+.join-us a{
+  background: linear-gradient(to right, #f44336 0%, #f4433687 100%);
+}
+.carousel-item img{
+  height: 400px;
+}
+}
+@media screen and (max-width: 500px){
+div {
+    width: 100%;
+}}

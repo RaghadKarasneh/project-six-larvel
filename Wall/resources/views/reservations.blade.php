@@ -1,3 +1,4 @@
+
 @extends('master')
 
 @section('title','Reservation')
@@ -9,8 +10,8 @@
       <li class="breadcrumb-item active" aria-current="page">Reservation</li>
     </ol>
   </nav>
-
-<div class="container" >
+<div class="container-fluied">
+<div class="container" id="polina">
     
     <div class="row text-start w-100 fs-5 px-5">
 
@@ -24,7 +25,7 @@
             @csrf
             <input type="hidden" name="_token" value="{{csrf_token()}}" />
 
-            <label>choose services?</label><br>
+            <label>*Choose service?</label><br>
             <select  class="mb-3" name="service" id="cars">
                 @foreach ($services as $ser)
                     <option value="{{$ser->id}}">{{$ser->service_name}}</option>  
@@ -32,25 +33,25 @@
                 @endforeach    
             </select>
             <br>
-           <label>Would you be able to pay the cost of the service?</label>
+           <label>*Would you be able to pay the the service's cost?</label>
            <br>
             <input  class="mb-3" type="radio"  name="pay" value="1"><label >Yes</label>
             <input class="mb-3" type="radio"  name="pay" value="0"><label>No</label>
-            <label>Upload an image of the location of required service:</label><br>
+            <label>*Upload an image of the location of required service:</label><br>
             <input class="mb-3" type="file"  name="service_image" class="mb-5" required><br><br>
-            <label>Calculate Cost:</label><br>
+            <label>*Calculate Cost:</label><br>
             <label for="">Height</label>
             <input type="number" name="Height" id="Height" oninput="calc();" required >m
             <br><label for="">Width</label>&nbsp;
             <input type="number" name="Width" id="Width" oninput="calc();" required>m
             <input type="hidden" name="cost" id="cost"  value="30">
-            <br> Total : <input type="number" id="total" name="total"  readonly style="border:1px darkred solid; background:rgb(185, 188, 192); margin-left:11px;">JOD<br><br>
+            <br> Total <input type="number" id="total" name="total"  readonly>JOD<br><br>
                                      
             <button  class="btn btn-danger  d-none d-md-block pull-right  hidden-xs hidden-sm waves-effect waves-light text-white">Send</button>
         </form>
      </div>
         
-     <div class="col-lg-4"><img src="https://www.sun-sentinel.com/resizer/3n1b8xfXcvqEwfT3df_rY-s_MCM=/2000x1157/filters:format(jpg):quality(70)/www.trbimg.com/img-5a14a5d4/turbine/fl-sb-hollywood-murals-street-art-20171103" alt="" srcset="" width="560px" height="500px"> </div>
+     {{-- <div class="col-lg-4"><img src="https://www.sun-sentinel.com/resizer/3n1b8xfXcvqEwfT3df_rY-s_MCM=/2000x1157/filters:format(jpg):quality(70)/www.trbimg.com/img-5a14a5d4/turbine/fl-sb-hollywood-murals-street-art-20171103" alt="" srcset="" width="560px" height="500px"> </div> --}}
 </div>
   </div>
 
@@ -70,3 +71,4 @@
       document.getElementById("total").value = total;
     }
      </script>
+</div>

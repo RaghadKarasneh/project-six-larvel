@@ -19,7 +19,7 @@
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <img src="http://2.bp.blogspot.com/-DUXbBA3uucI/UBGNPDiSP_I/AAAAAAAAAOE/ZY5kvdZG8iY/s1600/001%2BBALMES%2B2010.jpg" alt="about" class="img-fluid" width="80%" id="aboutus-image">
+                <img src="http://2.bp.blogspot.com/-DUXbBA3uucI/UBGNPDiSP_I/AAAAAAAAAOE/ZY5kvdZG8iY/s1600/001%2BBALMES%2B2010.jpg" alt="about" class="img-fluid" width="100%" id="aboutus-image">
             </div>
             <div class="col-lg-6">
                 <br>
@@ -53,7 +53,7 @@
     </div>
 
 </section>
-<br><br><br><br>
+
 <section class="about">
     <div class="container">
         <div class="row">
