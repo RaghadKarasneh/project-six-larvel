@@ -23,7 +23,9 @@ class AdminController extends Controller
         $count2= count($service2);
         $service3 = DB::select('select * from reservations where service_id=3');
         $count3= count($service3);
-        $datas=[$count1, $count2, $count3];
+        $service4 = DB::select('select * from reservations where service_id=4');
+        $count4= count($service4);
+        $datas=[$count1, $count2, $count3, $count4];
 
         return view('Admin.dashboard',['usersCount'=>$usersCount, 'servicesCount'=>$servicesCount, 'reservationsCount'=>$reservationsCount, 'datas'=>$datas]);
     }

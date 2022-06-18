@@ -38,9 +38,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="/info/{{Session('id')}}" style="display:{{$displayNav}}">Your Account</a>
             </li>
-            {{-- <li class="nav-item">
-                <a class="nav-link" href="/info/{{Session('id')}}" style="display:{{$displayNav}}">LOGOUT</a>
-            </li> --}}
+            <li class="nav-item">
+                <a class="nav-link" href="/" style="display:{{$displayNav}}">Logout</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link hidden-nav" href="/registration">Sign Up</a>
             </li>

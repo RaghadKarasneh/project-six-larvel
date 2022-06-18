@@ -220,7 +220,7 @@
                 <!-- ============================================================== -->
                 <!-- PRODUCTS YEARLY SALES -->
                 <!-- ============================================================== -->
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="white-box">
                             <h3 class="box-title">Yearly Provided Services</h3>
@@ -241,52 +241,19 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                {{-- Chart///////////////////////////////////////////////////// --}}
-                {{-- <div style="width:900px; height:400px; margin:auto;">
-                    <canvas id="barChart"></canvas>
-                </div>
-                <?php $datas= json_encode($datas); ?>
-                <script>
-                    $(function(){
-                        var datas=<?=$datas?>;
-                        var barCanvas= $("#barChart");
-                        var barChart= new Chart(barCanvas,{
-                            type:'bar';
-                            data:{
-                                labels:['Service1', 'Service2', 'Service3'],
-                                datasets:[
-                                    {
-                                        label: 'Count Of Users',
-                                        data: datas,
-                                        backgroundColor:['red','yellow','green']
-                                    }
-                                ]
-                            },
-                            options:{
-                                scales:{
-                                    yAxes:[{
-                                        ticks:{
-                                            beginAtZero:true
-                                        }
-                                    }]
-                                }
-                            }
-                        });
-                    })
-                </script> --}}
+                </div> --}}
 
-
-
-
-                
-                {{-- end chart ///////////////////////////////////////////////// --}}
+                {{-- Bar Chart --}}     
+               @include('Admin.chart')
+            
+                {{-- End of bar chart  --}}
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
+            </div>
             <footer class="footer text-center"> Copyright W(ALL) © 2022. All rights reserved.
             </footer>
             <!-- ============================================================== -->
