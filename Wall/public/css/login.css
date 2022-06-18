@@ -81,3 +81,7 @@
   .footer-copyright{
     background-color: transparent !important;
   }
+  .card{
+    width: 70%;
+    margin: auto;
+  }
