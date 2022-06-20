@@ -30,14 +30,14 @@
                 <div class="row">
 
                     <!--Grid column-->
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="md-form mb-0">
                             <label for="name" class="">First name</label>
                             <input type="text" id="name" name="first_name" class="form-control">
                             
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="md-form mb-0">
                             <label for="name" class="">Last name</label>
                             <input type="text" id="name" name="last_name" class="form-control">

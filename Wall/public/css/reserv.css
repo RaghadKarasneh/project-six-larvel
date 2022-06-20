@@ -2,12 +2,12 @@ form input{
     margin-right: 15px;
     border-radius: 12px;
     padding: 5px 10px;
-    border-color: #d7d4d4;
+    border-color: #e8e8e8;
     background-color: transparent;
   }
   label{
   
-    color: #fff;
+    color: #524f4f;
       margin-bottom: 15px;
   }
   
@@ -47,7 +47,7 @@ form input{
      #polina{ 
       font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
       font-weight:100; 
-      background: rgb(0 0 0 / 69%);
+      box-shadow: 1px 5px 30px #f37c73;
       color: white;
       padding: 2rem;
       width: 53%;
@@ -55,8 +55,9 @@ form input{
       font-size: 1.2rem;
     }
    .container-fluied{
-background-image: url('/images/reserve.png');
-    }
+/* background-image: url('/images/reserve.png'); */
+margin: 100px;    
+}
     .container-fluied .container{
 margin-top: 0 !important;
     }

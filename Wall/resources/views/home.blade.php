@@ -208,6 +208,7 @@
                 <div class="col-lg-6 text-center">
                     <h1>JOIN US</h1>
                     <p class="text-center"> If you are intrested in what we do and you want to be a member of our family then join us NOW.</p>
+                    <br>
                     <a href="{{url('/add')}}">JOIN US</a>
                 </div>
             </div>

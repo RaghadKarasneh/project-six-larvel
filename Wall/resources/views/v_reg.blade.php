@@ -58,7 +58,7 @@ color: gray;
     <textarea class="form-control" id="" rows="3" name="description" placeholder="Describe Yourself and your work"></textarea>
   </div><br>
 <br>
-  <button type="submit" class="btn btn-danger">Submit</button>
+  <button type="submit" class="btn" style="    background: linear-gradient(-45deg, #f44336, #eb6d64, #d66159, #f44336); color: #fff">Submit</button>
 </form>
 </div>
   </div>

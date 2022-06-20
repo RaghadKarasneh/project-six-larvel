@@ -25,7 +25,7 @@
             @csrf
             <input type="hidden" name="_token" value="{{csrf_token()}}" />
 
-            <label>*Choose service?</label><br>
+            <label>Choose service? (required)</label><br>
             <select  class="mb-3" name="service" id="cars">
                 @foreach ($services as $ser)
                     <option value="{{$ser->id}}">{{$ser->service_name}}</option>  
@@ -33,16 +33,16 @@
                 @endforeach    
             </select>
             <br>
-           <label>*Would you be able to pay the the service's cost?</label>
+           <label>Would you be able to pay the the service's cost? (required)</label>
            <br>
             <input  class="mb-3" type="radio"  name="pay" value="1"><label >Yes</label>
-            <input class="mb-3" type="radio"  name="pay" value="0"><label>No</label>
-            <label>*Upload an image of the location of required service:</label><br>
+            <input class="mb-3" type="radio"  name="pay" value="0" style="margin-left: 30px"><label>No</label>
+            <label>Upload a picture of the facility to be painted: (required)</label><br>
             <input class="mb-3" type="file"  name="service_image" class="mb-5" required><br><br>
-            <label>*Calculate Cost:</label><br>
-            <label for="">Height</label>
+            <label>Calculate Cost:</label><br>
+            <label for="">Height (required)</label>
             <input type="number" name="Height" id="Height" oninput="calc();" required >m
-            <br><label for="">Width</label>&nbsp;
+            <br><label for="">Width (required)</label>&nbsp;
             <input type="number" name="Width" id="Width" oninput="calc();" required>m
             <input type="hidden" name="cost" id="cost"  value="30">
             <br> Total <input type="number" id="total" name="total"  readonly>JOD<br><br>
@@ -55,6 +55,7 @@
 </div>
   </div>
 
+</div>
 
 
 @endsection
@@ -71,4 +72,3 @@
       document.getElementById("total").value = total;
     }
      </script>
-</div>

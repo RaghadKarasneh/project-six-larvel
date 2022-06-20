@@ -23,10 +23,13 @@ label{
   margin-right: 150px;
 }
 .btn{
-  background-color: #d73e49;
+  background: linear-gradient(-45deg, #f44336, #eb6d64, #d66159, #f44336);
   padding: 10px 50px;
   margin-top: 50px;
   color: #fff;
+}
+.btn:hover{
+  color: white;
 }
 .breadcrumbNav{
   background: rgb(0 0 0 / 10%) !important;
@@ -43,3 +46,17 @@ color: gray;
    .first-a:hover{
     color: #d73e49;
    }
+   form{
+    width: 50%;
+    margin: auto;
+   }
+   .col-md-9{
+    border-right: 1px solid #cdcbcb;
+   }
+  .row ul{
+    margin-top: 110px;
+   }
+   .fas{
+    color:   #d73e49;
+   }
+ 

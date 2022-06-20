@@ -24,7 +24,7 @@ color: gray;
   
 }
 .col-lg-6 .btn{
-   background-color: #d73e49;
+  background: linear-gradient(-45deg, #f44336, #eb6d64, #d66159, #f44336);
    color: white;
    padding: 15px 20px;
    margin-top: 20px;

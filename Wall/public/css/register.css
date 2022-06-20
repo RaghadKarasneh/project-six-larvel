@@ -4,11 +4,16 @@
   
 
     background-color:rgb(255, 255, 255);
-    background: linear-gradient(-45deg, #000dff, #f82777, #15b0e9, #1edbaf);
+    background: linear-gradient(-45deg, #f44336, #ecaeaa, #d66159, #f44336);
+    
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
      
   
+  }
+  body button{
+    background: linear-gradient(-45deg, #f44336, #eb6d64, #d66159, #f44336);
+    border: unset !important;
   }
   main{
  
@@ -79,6 +84,7 @@
   .have-account a{
     font-size: 17px;
     text-decoration: none;
+    color: #ec2f2f;
   }
   .card{
     width: 70%;

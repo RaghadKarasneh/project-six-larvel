@@ -33,7 +33,7 @@
                 <a class="nav-link" href="{{url('/about-us')}}">About Us</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/#services">Services</a>
+                <a class="nav-link" href="/add">Volunteer</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/info/{{Session('id')}}" style="display:{{$displayNav}}">Your Account</a>
